@@ -231,14 +231,13 @@ button.navbar-toggler:focus {
 .aboutMe{
 	text-align: center;
 	position: relative;
-	margin-top: 80px;
-	padding-top: 20px;
+	padding-top: 100px;
 	left: 50%;
 	transform: translate(-50%);
 	animation: 2s ease-out 0s 1 fadeIn;
 	float: left;
 	color: white;
-	height: 500px;
+	height: 800px;
 	background-color: rgba(0,0,0,0.6);
 }
 
@@ -257,7 +256,7 @@ button.navbar-toggler:focus {
 }
 .table-dark > tbody > tr > th, .table-dark > tbody > tr > td{
 	font-weight: 100;
-	text-align: left
+	text-align: left;
 }
 
 
