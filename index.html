@@ -11,13 +11,15 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="images/fav/favicon-16x16.png">
 	<link rel="manifest" href="images/fav/site.webmanifest">
 	<script src="https://kit.fontawesome.com/fe527aa381.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="main.css">
 </head>
-<body>
-	<div class="body-background">
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<div class="bodyScreen">
 	</div>
 	<div class="navContainer">
-		<nav class="navbar navbar-expand-lg navbar-light" style="padding: 10px 10% 10px 10%;">
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="padding: 10px 10% 10px 10%;">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -25,11 +27,11 @@
 
 			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 				<ul class="navbar-nav ml-auto mt-2 mt-lg-0" style="text-align: center;">
-					<li class="nav-item section1nav active">
-						<a class="nav-link" href="#"><i class="fas fa-house-user"></i><br>HOME</a>
+					<li class="nav-item section1nav">
+						<a class="nav-link" href="#section1"><i class="fas fa-house-user"></i><br>HOME</a>
 					</li>
 					<li class="nav-item section2nav">
-						<a class="nav-link" href="#"><i class="fas fa-id-card"></i><br>ABOUT ME</a>
+						<a class="nav-link" href="#section2"><i class="fas fa-id-card"></i><br>ABOUT ME</a>
 					</li>
 					<li class="nav-item section3nav">
 						<a class="nav-link" href="#"><i class="fas fa-graduation-cap"></i><br>EDUCATION</a>
@@ -47,52 +49,55 @@
 			</div>
 		</nav>
 	</div>
-	<div class="container banner sections section1">
-		<h1 class="authorName">I'M <span style="color: #F02311;">ASHUTOSH</span>,</h1>
-		<div class="container subTitle">PROGRAMMER | WEB GEEK | PANTOMATH</div>
-		<div class="socialIcons">
-			<ul>
-				<li style="--animation-order: 4;"><a href="" class="rounded-circle"><i class="fab fa-twitter"></i></a></li>
-				<li style="--animation-order: 6;"><a href="" class="rounded-circle"><i class="fab fa-facebook-f"></i></a></li>
-				<li style="--animation-order: 8;"><a href="" class="rounded-circle"><i class="fab fa-instagram"></i></a></li>
-				<li style="--animation-order: 10;"><a href="" class="rounded-circle"><i class="fab fa-linkedin-in"></i></a></li>
-			</ul>
-		</div>
-		<div class="downloadResume">
-			<a href="https://bit.ly/Ashutosh_Resume" target="_blank">DOWNLOAD RESUME</a> | <span id="section2nav" class="enterProfile" >ENTER PROFILE</span>
-		</div>
-	</div>
-	<div class="container aboutMe sections section2">
-		<h1>ABOUT ME</h1>
-		<div class="row">
-			<div class="col-md-6 aboutMeSec">
-				<p style="font-size: 20px; font-weight: 100; line-height: 30px;">A programming enthusiast with a diverse set of skills and experience in software development and automation testing. Certified Applied Data Science with Python (Level-2) by IBM. Skilled and trained in various technologies such as Python, Unix/Linux, Web Development, Java and more. I have a keen interest in ML/AI and Cognitive Neuroscience.</p>
+	<div class="container-fluid secMain">
+		<div id="section1" class="container banner section1">
+			<h1 class="authorName">I'M <span style="color: #F02311;">ASHUTOSH</span>,</h1>
+			<div class="container subTitle">PROGRAMMER | WEB GEEK | PANTOMATH</div>
+			<div class="socialIcons">
+				<ul>
+					<li style="--animation-order: 4;"><a href="" class="rounded-circle"><i class="fab fa-twitter"></i></a></li>
+					<li style="--animation-order: 6;"><a href="" class="rounded-circle"><i class="fab fa-facebook-f"></i></a></li>
+					<li style="--animation-order: 8;"><a href="" class="rounded-circle"><i class="fab fa-instagram"></i></a></li>
+					<li style="--animation-order: 10;"><a href="" class="rounded-circle"><i class="fab fa-linkedin-in"></i></a></li>
+				</ul>
 			</div>
-			<div class="col-md-6 aboutMeSec">
-				<table class="table table-dark" style="width: 300px; margin: 0 auto;">
-					<tbody>
-						<tr>
-							<th scope="row">Name</th>
-							<td>Ashutosh Tripathy</td>
-						</tr>
-						<tr>
-							<th scope="row">Age</th>
-							<td>24 Years Old</td>
-						</tr>
-						<tr>
-							<th scope="row">Phone</th>
-							<td>(+91) 7809 473 611</td>
-						</tr>
-						<tr>
-							<th scope="row">Email</th>
-							<td>tripathyashutosh88@gmail.com</td>
-						</tr>
-						<tr>
-							<th scope="row">Location</th>
-							<td>Bhubaneswar, India</td>
-						</tr>
-					</tbody>
-				</table>
+			<div class="downloadResume">
+				<a href="https://bit.ly/Ashutosh_Resume" target="_blank">DOWNLOAD RESUME</a> | <a href="#section2">ENTER PROFILE</a>
+			</div>
+		</div>
+		<br>
+		<div id="section2" class="container aboutMe">
+			<h1>ABOUT ME</h1>
+			<div class="row" style="position: relative;">
+				<div class="col-lg-6 aboutMeSec">
+					<p style="">A programming enthusiast with a diverse set of skills and experience in software development and automation testing. Certified Applied Data Science with Python (Level-2) by IBM. Skilled and trained in various technologies such as Python, Unix/Linux, Web Development, Java and more. I have a keen interest in ML/AI and Cognitive Neuroscience.</p>
+				</div>
+				<div class="col-lg-6">
+					<table class="table table-dark" style="width: 300px; margin-top: 20px;">
+						<tbody>
+							<tr>
+								<th scope="row">Name</th>
+								<td>Ashutosh Tripathy</td>
+							</tr>
+							<tr>
+								<th scope="row">Age</th>
+								<td>24 Years Old</td>
+							</tr>
+							<tr>
+								<th scope="row">Phone</th>
+								<td>(+91) 7809 473 611</td>
+							</tr>
+							<tr>
+								<th scope="row">Email</th>
+								<td>tripathyashutosh88@gmail.com</td>
+							</tr>
+							<tr>
+								<th scope="row">Location</th>
+								<td>Bhubaneswar, India</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
