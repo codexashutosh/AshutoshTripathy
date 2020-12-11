@@ -7,8 +7,14 @@ $(".navbar li").on("click", function() {
 	$(".navbar .navbar-collapse").removeClass("show");
 });
 $(function(){
-  $('.banner, .aboutme').css({ height: $(window).innerHeight() });
+  $('.banner').css({ height: $(window).innerHeight() });
   $(window).resize(function(){
-    $('.banner, .aboutme').css({ height: $(window).innerHeight() });
+    $('.banner').css({ height: $(window).innerHeight() });
+  });
+});
+$(function(){
+  $('.aboutme').css({ height: $(window).innerHeight() });
+  $(window).resize(function(){
+    $('.aboutme').css({ height: $(window).innerHeight() });
   });
 });
