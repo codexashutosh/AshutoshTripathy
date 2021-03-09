@@ -28,6 +28,4 @@ const navSlide =() =>{
     });
 }
 
-navSlide(); 
-
-
+navSlide();

@@ -263,6 +263,7 @@ nav{
     @include flexCenter(column, white);
     color: rgb(66, 66, 66);
     background-color: rgb(22, 22, 22);
+    text-align: center;
 }
 .summary-wrap{
     // background: linear-gradient(-45deg, $base_color, $base_color2);
@@ -270,12 +271,11 @@ nav{
     // animation: gradient 5s ease infinite;
     position: relative;
     // border-radius: 50px 0px 50px 0px;
-    padding: 10px;
+    // padding: 10px;
     width: 80%;
 }
 
 .summary{
-    padding: 20px 10px;
     // border-radius: 50px 0px 50px 0px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 20px;
@@ -304,15 +304,15 @@ nav{
     }
 }
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 @media only screen and (max-width: 600px){
     .authorName{
@@ -330,12 +330,26 @@ nav{
         padding: 10px 5px;
         font-size: 16px;
     }
+    .skillsCloud{
+        width: 95%!important;
+        ul.cloud{
+            a{
+                font-size: calc(var(--size) * 0.20rem);
+            }
+        }
+    }
+    
     footer{
         font-size: 12px;
     }
 }
 @media only screen and (max-width: 1024px){
     .summary{
+        hr{
+            margin: 5px 0px 15px 0px;
+        }
+    }
+    .skillsCloud {
         hr{
             margin: 5px 0px 15px 0px;
         }
@@ -357,13 +371,13 @@ nav{
 .exp{
     @include flexCenter(column, white);
     color: rgb(66, 66, 66);
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(22, 22, 22);
     text-align: center;
 }
 .edu{
     @include flexCenter(column, white);
     color: rgb(66, 66, 66);
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(20, 20, 20);
     text-align: center;
 }
 .skills{
@@ -371,14 +385,81 @@ nav{
     color: rgb(66, 66, 66);
     background-color: rgb(20, 20, 20);
     text-align: center;
+    .skillsCloud{
+        padding: 10px;
+        width: 80%;
+        font-weight: 400;
+        h1{
+            color: $base_color2;
+        }
+        hr{
+            border: none;
+            background: linear-gradient(-45deg, $base_color, $base_color2);
+            background-size: 400% 400%;
+            animation: gradient 5s ease infinite;
+            height: 5px;
+            margin: 10px 0px 30px 0px;
+            border-radius: 50%;
+        }
+    }
 }
 
+ul.cloud {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.5rem;
+    a {
+        color: #424242;
+        display: block;
+        font-size: 1.5rem;
+        padding: 0.125rem 0.25rem;
+        text-decoration: none;
+        position: relative;
+        --size: 4;
+        font-size: calc(var(--size) * 0.25rem + 0.5rem);
+        opacity: calc((15 - (9 - var(--size))) / 15);
+    }
+    li {
+        animation-name: wobble;
+        animation-duration: 3.25s;
+        animation-delay: calc(var(--param) * 500ms);
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    a[data-weight="1"] { --size: 1; }
+    a[data-weight="2"] { --size: 2; }
+    a[data-weight="3"] { --size: 3; }
+    a[data-weight="4"] { --size: 4; }
+    a[data-weight="5"] { --size: 5; }
+    a[data-weight="6"] { --size: 6; }
+    a[data-weight="7"] { --size: 7; }
+    a[data-weight="8"] { --size: 8; }
+    a[data-weight="9"] { --size: 9; }
+    a[data-weight="10"] { --size: 10; }
+}
+@keyframes wobble{
+	0%,100% {
+		transform: scale(0.9);
+		opacity: 0.7;
+	}
+	50% {
+        transform: scale(1);
+		opacity: 1;
+	}
+}
 #footer{
     text-align: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     padding: 5px;
     font-size: 14px;
     display: flex;
+    background-color: $body_bg_color;
     #f1{
         flex: 1;
     }
