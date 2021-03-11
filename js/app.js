@@ -55,7 +55,7 @@ function previewFile()
         content: {
             /* Location of file where it is hosted */
             location: {
-                url: "https://drive.google.com/file/d/1lSAH3Yq7fDkLz6GUFg3YrlfIvMz7UDee",
+                url: "https://drive.google.com/uc?export=download&id=1lSAH3Yq7fDkLz6GUFg3YrlfIvMz7UDee",
                 /*
                 If the file URL requires some additional headers, then it can be passed as follows:-
                 header: [
