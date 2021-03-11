@@ -34,24 +34,20 @@ const dropboxLink = "https://www.dropbox.com/s/urznjs2o5my48lj/AshutoshTripathy_
 const clientId = "91825b8fdf5441989b572f9af3488eda";
 const viewerOptions = {
     embedMode: "LIGHT_BOX",
-    defaultViewMode: "FIT_PAGE",
-    showDownloadPDF: true,
-    showPrintPDF: true,
-    showLeftHandPanel: true,
-    showAnnotationTools: true
+    defaultViewMode: "FIT_PAGE"
 };
 
 var urlToPDF = "";
 
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
     document.getElementById("viewCV").disabled = false;
-    urlToPDF = directLinkFromDropboxLink(dropboxLink);
 });
 
 function previewFile(){
+    urlToPDF = directLinkFromDropboxLink(dropboxLink);
     var adobeDCView = new AdobeDC.View({
         clientId: clientId, // This clientId can be used for any CodePen example
-        divId: "viewCV"
+        // divId: "viewCV"
     });
     adobeDCView.previewFile(
         {
