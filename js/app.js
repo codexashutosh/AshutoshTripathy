@@ -42,6 +42,10 @@ const viewerOptions = {
 };
 
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
+    document.getElementById("view-pdf-btn").disabled = false;
+});
+
+function previewFile(){
     var urlToPDF = directLinkFromDropboxLink(dropboxLink);
     var adobeDCView = new AdobeDC.View({
         clientId: clientId, // This clientId can be used for any CodePen example
@@ -54,7 +58,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         },
         viewerOptions
     );
-});
+};
 
 // Utility Functions:
 // Return a Promise that fetches the PDF. 
