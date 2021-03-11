@@ -45,7 +45,7 @@ var urlToPDF = "";
 
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
     document.getElementById("viewCV").disabled = false;
-    var urlToPDF = directLinkFromDropboxLink(dropboxLink);
+    urlToPDF = directLinkFromDropboxLink(dropboxLink);
 });
 
 function previewFile(){
