@@ -29,3 +29,48 @@ const navSlide =() =>{
 }
 
 navSlide();
+
+/* Pass the embed mode option here */
+const viewerConfig = {
+    embedMode: "LIGHT_BOX"
+};
+
+/* Wait for Adobe Document Services PDF Embed API to be ready and enable the View PDF button */
+document.addEventListener("adobe_dc_view_sdk.ready", function () {
+    document.getElementById("viewCV").disabled = false;
+});
+
+/* Function to render the file using PDF Embed API. */
+function previewFile()
+{
+    /* Initialize the AdobeDC View object */
+    var adobeDCView = new AdobeDC.View({
+        /* Pass your registered client id */
+        clientId: "91825b8fdf5441989b572f9af3488eda"
+    });
+
+    /* Invoke the file preview API on Adobe DC View object */
+    adobeDCView.previewFile({
+        /* Pass information on how to access the file */
+        content: {
+            /* Location of file where it is hosted */
+            location: {
+                url: "https://drive.google.com/file/d/1lSAH3Yq7fDkLz6GUFg3YrlfIvMz7UDee/view?usp=drivesdk",
+                /*
+                If the file URL requires some additional headers, then it can be passed as follows:-
+                header: [
+                    {
+                        key: "<HEADER_KEY>",
+                        value: "<HEADER_VALUE>",
+                    }
+                ]
+                */
+            },
+        },
+        /* Pass meta data of file */
+        metaData: {
+            /* file name */
+            fileName: "Ashutosh Tripathy CV"
+        }
+    }, viewerConfig);
+};

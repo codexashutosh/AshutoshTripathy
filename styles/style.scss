@@ -242,18 +242,22 @@ nav{
     // text-transform: uppercase;
     font-weight: 200;
     font-size: 14px;
-    padding: 25px 0px;
-    a{
-        text-decoration: none;
+    padding: 20px 0px;
+    button{
+        // text-decoration: none;
+        font-weight: 200;
+        font-size: 14px;
         color: rgb(150,150,150);
+        background-color: inherit;
         padding: 5px 10px;
         border-radius: 30px;
+        border-color: transparent;
         font-family: 'Poppins', sans-serif;
         transition: all 0.3s ease;
-        width: 200px;
+        width: 130px;
         box-shadow: inset 0px 0px 10px rgb(10, 10, 10), inset 0px 0px 10px rgb(10, 10, 10);
     }
-    a:hover{
+    button:hover{
         box-shadow: 0px 0px 7px rgb(10, 10, 10), 0px 0px 7px rgb(10, 10, 10);
         color: rgb(200, 200, 200);
     }
@@ -444,14 +448,14 @@ ul.cloud {
     a[data-weight="10"] { --size: 10; }
 }
 @keyframes wobble{
-	0%,100% {
-		transform: scale(0.9);
-		opacity: 0.7;
-	}
-	50% {
+    0%,100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    50% {
         transform: scale(1);
-		opacity: 1;
-	}
+        opacity: 1;
+    }
 }
 #footer{
     text-align: center;

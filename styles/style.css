@@ -353,23 +353,26 @@ nav ul li:hover {
 .bannerBtn {
   font-weight: 200;
   font-size: 14px;
-  padding: 25px 0px;
+  padding: 20px 0px;
 }
 
-.bannerBtn a {
-  text-decoration: none;
+.bannerBtn button {
+  font-weight: 200;
+  font-size: 14px;
   color: #969696;
+  background-color: inherit;
   padding: 5px 10px;
   border-radius: 30px;
+  border-color: transparent;
   font-family: 'Poppins', sans-serif;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  width: 200px;
+  width: 130px;
   -webkit-box-shadow: inset 0px 0px 10px #0a0a0a, inset 0px 0px 10px #0a0a0a;
           box-shadow: inset 0px 0px 10px #0a0a0a, inset 0px 0px 10px #0a0a0a;
 }
 
-.bannerBtn a:hover {
+.bannerBtn button:hover {
   -webkit-box-shadow: 0px 0px 7px #0a0a0a, 0px 0px 7px #0a0a0a;
           box-shadow: 0px 0px 7px #0a0a0a, 0px 0px 7px #0a0a0a;
   color: #c8c8c8;
