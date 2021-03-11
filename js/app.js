@@ -30,47 +30,62 @@ const navSlide =() =>{
 
 navSlide();
 
-/* Pass the embed mode option here */
-const viewerConfig = {
-    embedMode: "LIGHT_BOX"
+const dropboxLink = "https://www.dropbox.com/s/urznjs2o5my48lj/AshutoshTripathy_3_10_20_.pdf?dl=0";
+const clientId = "91825b8fdf5441989b572f9af3488eda";
+const viewerOptions = {
+    embedMode: "LIGHT_BOX",
+    defaultViewMode: "FIT_PAGE",
+    showDownloadPDF: true,
+    showPrintPDF: true,
+    showLeftHandPanel: true,
+    showAnnotationTools: true
 };
 
-/* Wait for Adobe Document Services PDF Embed API to be ready and enable the View PDF button */
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
-    document.getElementById("viewCV").disabled = false;
+    var urlToPDF = directLinkFromDropboxLink(dropboxLink);
+    var adobeDCView = new AdobeDC.View({
+        clientId: clientId, // This clientId can be used for any CodePen example
+        divId: "viewCV"
+    });
+    adobeDCView.previewFile(
+        {
+            content: { promise: fetchPDF(urlToPDF) },
+            metaData: { fileName: urlToPDF.split("/").slice(-1)[0] }
+        },
+        viewerOptions
+    );
 });
 
-/* Function to render the file using PDF Embed API. */
-function previewFile()
-{
-    /* Initialize the AdobeDC View object */
-    var adobeDCView = new AdobeDC.View({
-        /* Pass your registered client id */
-        clientId: "91825b8fdf5441989b572f9af3488eda"
-    });
+// Utility Functions:
+// Return a Promise that fetches the PDF. 
+function fetchPDF(urlToPDF) {
+    return new Promise((resolve) => {
+        fetch(urlToPDF)
+            .then((resolve) => resolve.blob())
+            .then((blob) => {
+                resolve(blob.arrayBuffer());
+            })
+    })
+}
 
-    /* Invoke the file preview API on Adobe DC View object */
-    adobeDCView.previewFile({
-        /* Pass information on how to access the file */
-        content: {
-            /* Location of file where it is hosted */
-            location: {
-                url: "https://drive.google.com/uc?export=download&id=1lSAH3Yq7fDkLz6GUFg3YrlfIvMz7UDee",
-                /*
-                If the file URL requires some additional headers, then it can be passed as follows:-
-                header: [
-                    {
-                        key: "<HEADER_KEY>",
-                        value: "<HEADER_VALUE>",
-                    }
-                ]
-                */
-            },
-        },
-        /* Pass meta data of file */
-        metaData: {
-            /* file name */
-            fileName: "Ashutosh Tripathy CV"
-        }
-    }, viewerConfig);
-};
+// Converts a standar Dropbox link to a direct download link
+function directLinkFromDropboxLink(dropboxLink) {
+    return dropboxLink.replace("www.dropbox.com", "dl.dropboxusercontent.com").replace("?dl=0", "");
+}
+
+// Add arrayBuffer if necessary i.e. Safari
+(function () {
+    if (Blob.arrayBuffer != "function") {
+        Blob.prototype.arrayBuffer = myArrayBuffer;
+    }
+
+    function myArrayBuffer() {
+        return new Promise((resolve) => {
+            let fileReader = new FileReader();
+            fileReader.onload = () => {
+                resolve(fileReader.result);
+            };
+            fileReader.readAsArrayBuffer(this);
+        });
+    }
+})();
