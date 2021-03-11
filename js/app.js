@@ -70,7 +70,7 @@ function previewFile()
         /* Pass meta data of file */
         metaData: {
             /* file name */
-            fileName: "Ashutosh Tripathy CV"
+            fileName: "Ashutosh Tripathy CV.pdf"
         }
     }, viewerConfig);
 };
