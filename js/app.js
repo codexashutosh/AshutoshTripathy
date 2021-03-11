@@ -41,12 +41,14 @@ const viewerOptions = {
     showAnnotationTools: true
 };
 
+var urlToPDF = "";
+
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
     document.getElementById("view-pdf-btn").disabled = false;
+    var urlToPDF = directLinkFromDropboxLink(dropboxLink);
 });
 
 function previewFile(){
-    var urlToPDF = directLinkFromDropboxLink(dropboxLink);
     var adobeDCView = new AdobeDC.View({
         clientId: clientId, // This clientId can be used for any CodePen example
         divId: "viewCV"
