@@ -200,7 +200,7 @@ nav{
 .socialIcons{
     padding: 20px 0 0 0;
     line-height: 35px;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
     ul{
         list-style-type: none;
@@ -300,6 +300,7 @@ nav{
         margin-bottom: 30px;
         border-radius: 50%;
         text-align: center;
+        outline: 1px solid transparent;
     }
     h3{
         float: left;
@@ -417,12 +418,13 @@ nav{
             border: none;
             background: linear-gradient(-45deg, $base_color, $base_color2);
             background-size: 400% 400%;
-            animation: gradient 5s ease infinite, hrAnimate 3s ease-in-outinfinite alternate;
+            animation: gradient 5s ease infinite, hrAnimate 3s ease-in-out infinite alternate;
             height: 5px;
             margin: 0 auto;
             margin-top: 10px;
             margin-bottom: 30px;
             border-radius: 50%;
+            outline: 1px solid transparent;
         }
     }
 }
