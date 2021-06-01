@@ -30,7 +30,7 @@ const navSlide =() =>{
 
 navSlide();
 
-const dropboxLink = "https://www.dropbox.com/s/nf8v5pbiq2njmrr/AshutoshTripathy_29_05_21_.pdf?dl=0";
+const dropboxLink = "https://www.dropbox.com/s/h3ezt9cpjua795e/AshutoshTripathy_02_06_21_.pdf?dl=0";
 const clientId = "91825b8fdf5441989b572f9af3488eda";
 const viewerOptions = {
     embedMode: "LIGHT_BOX",
