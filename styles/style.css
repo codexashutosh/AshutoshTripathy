@@ -352,13 +352,14 @@ nav ul li:hover {
 }
 
 .bannerBtn {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 14px;
   padding: 20px 0px;
 }
 
-.bannerBtn button {
-  font-weight: 200;
+.bannerBtn .button {
+  text-decoration: none;
+  font-weight: 300;
   font-size: 14px;
   color: #969696;
   background-color: inherit;
@@ -373,7 +374,7 @@ nav ul li:hover {
           box-shadow: inset 0px 0px 10px #0a0a0a, inset 0px 0px 10px #0a0a0a;
 }
 
-.bannerBtn button:hover {
+.bannerBtn .button:hover {
   -webkit-box-shadow: 0px 0px 7px #0a0a0a, 0px 0px 7px #0a0a0a;
           box-shadow: 0px 0px 7px #0a0a0a, 0px 0px 7px #0a0a0a;
   color: #c8c8c8;
