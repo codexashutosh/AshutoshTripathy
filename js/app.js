@@ -20,7 +20,7 @@ const navSlide =() =>{
                 link.style.animation = '';
             }
             else{
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
             }
         });
         // burger animation
@@ -28,4 +28,13 @@ const navSlide =() =>{
     });
 }
 
+// for loader
+$('body').addClass('stop-scrolling');
+$('body').bind('touchmove', function(e){e.preventDefault()});
+$("#loading").show().delay(3000).fadeOut(
+    function(){
+        $('body').removeClass('stop-scrolling');
+        $('body').unbind('touchmove');
+    }
+);
 navSlide();

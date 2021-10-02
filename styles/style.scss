@@ -13,7 +13,10 @@ body{
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 300;
 }
-
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
 a:focus{
     outline: 0;
     outline-offset: 0;
@@ -29,9 +32,13 @@ a:focus{
     flex-direction: $flexCenter_direction;
     background: $flexCenter_bg;
 }
-.loading{
-    @include flexCenter(column, rgb(20, 20, 20));
-    display: none;
+#loading {
+    position: fixed;
+    display: block;
+    height: 100%;
+    text-align: center;
+    background-color: #121212;
+    z-index: 999;
 }
 nav{
     position: fixed;
@@ -82,11 +89,14 @@ nav{
     cursor: pointer;
 }
 .burger div{
-    width: 25px;
+    width: 20px;
     height: 2px;
     background-color: rgb(69, 69, 69);;
     margin: 5px;
     transition: 0.5s;
+}
+.line2{
+    width: 30px !important;
 }
 @media only screen and (max-width: 600px) {
     body{
@@ -112,7 +122,9 @@ nav{
         }
     }
     .burger{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -133,13 +145,14 @@ nav{
     }
 }
 .toggle .line1{
-    transform: rotate(-405deg) translate(-4px,6px);
+    transform: rotate(405deg) translate(2px,6px);
 }
 .toggle .line2{
-    opacity: 0;
+    transform: rotate(0deg) translate(-7px, 0px);
+    width: 20px !important;
 }
 .toggle .line3{
-    transform: rotate(405deg) translate(-4px,-6px);
+    transform: rotate(-405deg) translate(2px,-6px);
 }
 .logo{
     font-family: 'Jura', sans-serif;
@@ -437,7 +450,7 @@ ul.cloud {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     line-height: 2.5rem;
     a {
         color: #424242;
