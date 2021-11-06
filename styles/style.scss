@@ -435,6 +435,18 @@ nav{
     color: rgb(66, 66, 66);
     background-color: rgb(20, 20, 20);
     text-align: center;
+    .eduCard{
+        width: 80%;
+        h1{
+            color: $base_color2;
+        }
+        .subLine{
+            width: 50%;
+            height: 0.1px;
+            margin: 5px auto;
+            border-color: #424242;
+        }
+    }
 }
 .skills{
     @include flexCenter(column, white);
@@ -508,6 +520,7 @@ ul.cloud {
     font-size: 14px;
     display: flex;
     background-color: $body_bg_color;
+    color: $base_color;
     #f1{
         flex: 1;
     }

@@ -626,6 +626,21 @@ nav ul li:hover {
   text-align: center;
 }
 
+.edu .eduCard {
+  width: 80%;
+}
+
+.edu .eduCard h1 {
+  color: #1565C0;
+}
+
+.edu .eduCard .subLine {
+  width: 50%;
+  height: 0.1px;
+  margin: 5px auto;
+  border-color: #424242;
+}
+
 .skills {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -776,6 +791,7 @@ ul.cloud a[data-weight="10"] {
   display: -ms-flexbox;
   display: flex;
   background-color: #222222;
+  color: #b92b27;
 }
 
 #footer #f1 {
