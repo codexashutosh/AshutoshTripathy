@@ -438,7 +438,17 @@ nav ul li:hover {
   color: #1565C0;
 }
 
-.summary hr {
+.summary h3 {
+  float: left;
+  position: absolute;
+}
+
+.summary p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.animatedLine {
   border: none;
   background: linear-gradient(-45deg, #b92b27, #1565C0);
   background-size: 400% 400%;
@@ -451,16 +461,6 @@ nav ul li:hover {
   border-radius: 50%;
   text-align: center;
   outline: 1px solid transparent;
-}
-
-.summary h3 {
-  float: left;
-  position: absolute;
-}
-
-.summary p {
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 @-webkit-keyframes gradient {
@@ -590,6 +590,21 @@ nav ul li:hover {
   text-align: center;
 }
 
+.exp .expCard {
+  width: 80%;
+}
+
+.exp .expCard h1 {
+  color: #1565C0;
+}
+
+.exp .expCard .subLine {
+  width: 50%;
+  height: 0.1px;
+  margin: 5px auto;
+  border-color: #424242;
+}
+
 .edu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -640,20 +655,6 @@ nav ul li:hover {
 
 .skills .skillsCloud h1 {
   color: #1565C0;
-}
-
-.skills .skillsCloud hr {
-  border: none;
-  background: linear-gradient(-45deg, #b92b27, #1565C0);
-  background-size: 400% 400%;
-  -webkit-animation: gradient 5s ease infinite, hrAnimate 3s ease-in-out infinite alternate;
-          animation: gradient 5s ease infinite, hrAnimate 3s ease-in-out infinite alternate;
-  height: 5px;
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  border-radius: 50%;
-  outline: 1px solid transparent;
 }
 
 ul.cloud {
