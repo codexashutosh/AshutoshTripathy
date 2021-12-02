@@ -136,7 +136,7 @@ nav ul li:hover {
   nav ul {
     position: absolute;
     right: 0;
-    height: 92vh;
+    height: 60vh;
     top: 8vh;
     background-color: rgba(20, 20, 20, 0.8);
     display: -webkit-box;
