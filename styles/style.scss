@@ -564,3 +564,16 @@ ul.cloud {
 ::-webkit-scrollbar-track-piece{
     background: rgba(15,15,15,0.5); 
 }
+
+/* extras */
+h2{
+    .fas{
+        cursor: pointer !important;
+        color: $base_color2;
+        transition: all .3s ease;
+        text-shadow: 1px 1px 2px #424242;
+        &:hover{
+            color: #b92b27;
+        }
+    }
+}

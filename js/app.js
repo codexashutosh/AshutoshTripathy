@@ -3,7 +3,7 @@ window.addEventListener('scroll', () => {
 }, false);
 
 const navbar = document.querySelector('#navbar');
-const scrollspy = new VanillaScrollspy(navbar, 2000, 'easeInOutQuint');
+const scrollspy = new VanillaScrollspy(navbar, 1000, 'easeInOutQuint');
 scrollspy.init();
 
 const navSlide =() =>{
