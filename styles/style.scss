@@ -330,10 +330,17 @@ nav{
         float: left;
         position: absolute;
     }
-    p{
-        text-align: justify;
-        text-justify: inter-word;
+    .summaryText{
+        margin: 0 auto;
+        @include mobile {
+            width: 85%;
+        }
+        p{
+            text-align: justify;
+            text-justify: inter-word;
+        }
     }
+    
 }
 
 .animatedLine{
@@ -553,7 +560,7 @@ ul.cloud {
     font-size: 14px;
     display: flex;
     background-color: $body_bg_color;
-    color: $base_color;
+    color: #787878;
     #f1{
         flex: 1;
     }

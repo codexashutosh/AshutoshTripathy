@@ -466,7 +466,17 @@ nav ul li:hover {
   position: absolute;
 }
 
-.summary p {
+.summary .summaryText {
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .summary .summaryText {
+    width: 85%;
+  }
+}
+
+.summary .summaryText p {
   text-align: justify;
   text-justify: inter-word;
 }
@@ -834,7 +844,7 @@ ul.cloud a[data-weight="10"] {
   display: -ms-flexbox;
   display: flex;
   background-color: #222222;
-  color: #b92b27;
+  color: #787878;
 }
 
 #footer #f1 {
