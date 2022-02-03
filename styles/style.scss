@@ -1,4 +1,5 @@
 @import './variables';
+@import './mixins';
 
 *{
     margin: 0;
@@ -193,7 +194,13 @@ nav{
     border-width: 5px;
     border-style: groove;
     border-color: $base_color;
-    padding: 5px;
+    padding: 2px;
+    transition: all 0.3s ease;
+    &:hover{
+       @include ex-tablet {
+            transform: scale(1.2);
+        }
+    }
 }
 
 .banner{

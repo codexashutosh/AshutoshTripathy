@@ -1,3 +1,10 @@
+/* For Mobile Devices */
+/* For Excluding Mobile Devices */
+/* For low resolution  Tablets, Ipads */
+/* For Tablets Ipads portrait mode */
+/* For Excluding  Tablets Ipads */
+/* For Laptops and Desktops */
+/* For Large screens */
 * {
   margin: 0;
   padding: 0;
@@ -280,7 +287,16 @@ nav ul li:hover {
   border-width: 5px;
   border-style: groove;
   border-color: #b92b27;
-  padding: 5px;
+  padding: 2px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  #profileImg:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
 }
 
 .banner {
