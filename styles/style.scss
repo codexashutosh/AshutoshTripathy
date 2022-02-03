@@ -188,6 +188,14 @@ nav{
     @include flexCenter(column, rgb(20, 20, 20));
     color: white;
 }
+
+#profileImg {
+    border-width: 5px;
+    border-style: groove;
+    border-color: $base_color;
+    padding: 5px;
+}
+
 .banner{
     display: flex;
     justify-content: center;
@@ -422,6 +430,14 @@ nav{
         h1{
             color: $base_color2;
         }
+        #roles{
+            margin: 0 auto;
+            margin-top: 10px;
+            width: max-content;
+            padding: 10px 20px;
+            border: 2px outset #424242;
+            border-radius: 25%;
+        }
         .subLine{
             width: 50%;
             height: 0.1px;
@@ -430,6 +446,16 @@ nav{
         }
     }
 }
+
+.separator{
+    border: 1px solid #424242;
+    border-radius: 25%;
+    width: 3px;
+    background-color: #424242;
+    height: 1.5rem;
+    margin: 0 auto;
+}
+
 .edu{
     @include flexCenter(column, white);
     color: rgb(66, 66, 66);
