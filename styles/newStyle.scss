@@ -2,7 +2,9 @@
 @import './mixins';
 
 :root {
-	--white:#f1f1f1
+	--color:#f1f1f1;
+    --bg-color: black;
+    --aniTime:3s;
 }
 *{
     margin: 0;
@@ -13,8 +15,8 @@
     cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1159.ani), url(https://ani.cursors-4u.net/cursors/cur-13/cur1159.png), auto !important;
 }
 body {
-    color: #f1f1f1;
-    background-color: black;
+    color: var(--color);
+    background-color: var(--bg-color);
     font-family: 'Montserrat', sans-serif;
 }
 .header{
@@ -29,7 +31,7 @@ body {
     }
     span {
         font-size: 4rem;
-        font-weight: 300;
+        font-weight: 200;
         opacity: 0.15;
         @include mobile{
             font-size: 1rem;
@@ -43,51 +45,19 @@ body {
     }
     #U,#I {
         opacity: 1;
-	    animation: flickerUI 3s linear  reverse infinite;
-    }
-    #U::after{
-        content: '';
-        width: 150%;
-        box-shadow: -36px 0px 60px 8px rgba(255,255,255,1);
-    }
-    #I::after{
-        content: '';
-        width: 100%;
-        box-shadow: -20px 0px 60px 8px rgba(255,255,255,1);
+	    animation: flickerUI var(--aniTime) linear  reverse infinite;
     }
     #A, #T {
-        animation: flickerAT 3s linear reverse infinite;
-        position: relative;
-    }
-    #A::after, 
-    #A::before  {
-        content: '';
-        width: 100px;
-        height: 100px;
-        background: var(--white);
-        position: absolute;
-        top: -15%;
-        left: 50%;
-        border-radius: 100%;
-        opacity: 0.05;
-        filter: blur(10px);
-    }
-    #A::after {
-        width: 200px;
-        height: 200px;
-        top: -75%;
-        left: -145%;
-        opacity: 0.1;
-        filter: blur(10px);
+        animation: flickerAT var(--aniTime) linear reverse infinite;
     }
     #S, #P {
-        animation: flickerSP 3s linear reverse infinite
+        animation: flickerSP var(--aniTime) linear reverse infinite;
     }
     #H, #R {
-        animation: flickerHR 3s linear reverse infinite
+        animation: flickerHR var(--aniTime) linear reverse infinite;
     }
     #O, #Y {
-        animation: flickerOY 3s linear reverse infinite
+        animation: flickerOY var(--aniTime) linear reverse infinite;
     }
 }
 
@@ -228,7 +198,7 @@ body {
 
 @keyframes flickerHR {
 	0% {
-		opacity: 0.01;
+		opacity: 0.11;
 	}
 	5% {
 		opacity: 0.05;
@@ -237,7 +207,7 @@ body {
 		opacity: 0.03;
 	}
 	15% {
-		opacity: 0.1;
+		opacity: 0.15;
 	}
 	25% {
 		opacity: 0.07;
@@ -246,25 +216,25 @@ body {
 		opacity: 0.1;
 	}
 	35% {
-		opacity: 0.05;
+		opacity: 0.15;
 	}
 	40% {
 		opacity: 0.06;
 	}
 	45% {
-		opacity: 0.1;
+		opacity: 0.25;
 	}
 	60% {
-		opacity: 0;
+		opacity: 0.55;
 	}
 	70% {
 		opacity: 0.1;
 	}
 	80% {
-		opacity: 0;
+		opacity: 0.7;
 	}
 	90% {
-		opacity: 0.0;
+		opacity: 0.25;
 	}
 	100% {
 		opacity: 0.1;
