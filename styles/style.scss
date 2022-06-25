@@ -13,6 +13,7 @@ body{
     color: $default_text_color;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 300;
+    font-size: 16px;
 }
 .stop-scrolling {
     height: 100%;
@@ -184,16 +185,14 @@ nav{
     }
 }
 
-
 .header{
     @include flexCenter(column, rgb(20, 20, 20));
     color: white;
 }
 
 #profileImg {
-    border-width: 5px;
+    border-width: 1px;
     border-style: groove;
-    border-color: $base_color;
     padding: 2px;
     transition: all 0.3s ease;
     &:hover{
@@ -322,7 +321,6 @@ nav{
     font-size: 20px;
     font-weight: 400;
     text-align: center;
-    background: rgb(22,22,22);
     h1{
         color: $base_color2;
     }
@@ -400,7 +398,6 @@ nav{
             }
         }
     }
-    
     footer{
         font-size: 12px;
     }
@@ -449,8 +446,6 @@ nav{
             margin-top: 10px;
             width: max-content;
             padding: 10px 20px;
-            border: 2px outset #424242;
-            border-radius: 25%;
         }
         .subLine{
             width: 50%;

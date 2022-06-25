@@ -19,6 +19,7 @@ body {
   color: white;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 300;
+  font-size: 16px;
 }
 
 .stop-scrolling {
@@ -284,9 +285,8 @@ nav ul li:hover {
 }
 
 #profileImg {
-  border-width: 5px;
+  border-width: 1px;
   border-style: groove;
-  border-color: #b92b27;
   padding: 2px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -454,7 +454,6 @@ nav ul li:hover {
   font-size: 20px;
   font-weight: 400;
   text-align: center;
-  background: #161616;
 }
 
 .summary h1 {
@@ -638,8 +637,6 @@ nav ul li:hover {
   width: -moz-max-content;
   width: max-content;
   padding: 10px 20px;
-  border: 2px outset #424242;
-  border-radius: 25%;
 }
 
 .exp .expCard .subLine {
