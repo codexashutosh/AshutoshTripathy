@@ -285,8 +285,10 @@ nav ul li:hover {
 }
 
 #profileImg {
-  border-width: 1px;
-  border-style: groove;
+  height: 100px;
+  border: 1px groove;
+  border-radius: 50%;
+  opacity: .7;
   padding: 2px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
