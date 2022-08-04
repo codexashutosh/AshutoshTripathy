@@ -632,13 +632,33 @@ nav ul li:hover {
   color: #1565C0;
 }
 
+.exp .expCard .see-desc {
+  margin-top: 10px;
+  background-color: transparent;
+  border: 1px solid #424242;
+  border-radius: 10px;
+  padding: 5px;
+  color: inherit;
+  word-wrap: break-word;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.exp .expCard .see-desc:hover {
+  background-color: #424242;
+  color: #161616;
+}
+
 .exp .expCard #roles {
   margin: 0 auto;
   margin-top: 10px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   padding: 10px 20px;
+  text-align: justify;
+}
+
+.exp .expCard #roles p {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .exp .expCard .subLine {

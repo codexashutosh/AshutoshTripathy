@@ -38,3 +38,6 @@ $("#loading").show().delay(3000).fadeOut(
     }
 );
 navSlide();
+// $('.see-desc').on('click',function(){
+//     $('.roles').slideToggle();  //swap the display of the main content with slide action
+//   });

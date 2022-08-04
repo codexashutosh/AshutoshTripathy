@@ -443,11 +443,29 @@ nav{
         h1{
             color: $base_color2;
         }
+        .see-desc{
+            margin-top: 10px;
+            background-color: transparent;
+            border: 1px solid #424242;
+            border-radius: 10px;
+            padding: 5px;
+            color: inherit;
+            word-wrap: break-word;
+            transition: all 0.3s ease;
+            &:hover{
+                background-color: #424242;
+                color: #161616;
+            }
+        }
         #roles{
             margin: 0 auto;
             margin-top: 10px;
-            width: max-content;
             padding: 10px 20px;
+            text-align: justify;
+            p {
+                font-size: 1rem;
+                font-weight: bold;
+            }
         }
         .subLine{
             width: 50%;
