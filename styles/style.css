@@ -397,6 +397,7 @@ nav ul li:hover {
 }
 
 .bannerBtn {
+  display: none;
   font-weight: 300;
   font-size: 14px;
   padding: 20px 0px;
