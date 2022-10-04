@@ -397,7 +397,6 @@ nav ul li:hover {
 }
 
 .bannerBtn {
-  display: none;
   font-weight: 300;
   font-size: 14px;
   padding: 20px 0px;
@@ -654,7 +653,7 @@ nav ul li:hover {
   margin: 0 auto;
   margin-top: 10px;
   padding: 10px 20px;
-  text-align: justify;
+  text-align: center;
 }
 
 .exp .expCard #roles p {

@@ -31,7 +31,7 @@ const navSlide =() =>{
 // for loader
 $('body').addClass('stop-scrolling');
 $('body').bind('touchmove', function(e){e.preventDefault()});
-$("#loading").show().delay(3000).fadeOut(
+$("#loading").show().delay(1500).fadeOut(
     function(){
         $('body').removeClass('stop-scrolling');
         $('body').unbind('touchmove');
