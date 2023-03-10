@@ -901,7 +901,7 @@ ul.cloud a[data-weight="10"] {
 }
 
 @media (max-width: 480px) {
-  .hon {
+  .hon .honCard p {
     text-align: left;
   }
 }

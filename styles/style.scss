@@ -602,10 +602,10 @@ ul.cloud {
         p {
             font-size: 1.2rem;
             font-weight: bold;
+            @include mobile {
+                text-align: left;
+            }
         }
-    }
-    @include mobile {
-        text-align: left;
     }
 }
 
