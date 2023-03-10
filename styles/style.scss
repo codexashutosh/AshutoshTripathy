@@ -323,8 +323,10 @@ nav{
     font-size: 20px;
     font-weight: 400;
     text-align: center;
-    h1{
-        color: $base_color2;
+    h2{
+        &.section-heading {
+            color: $base_color2;
+        }
     }
     h3{
         float: left;
@@ -440,8 +442,10 @@ nav{
     text-align: center;
     .expCard{
         width: 80%;
-        h1{
-            color: $base_color2;
+        h2{
+            &.section-heading {
+                color: $base_color2;
+            }
         }
         .see-desc{
             margin-top: 10px;
@@ -463,7 +467,7 @@ nav{
             padding: 10px 20px;
             text-align: center;
             p {
-                font-size: 1rem;
+                font-size: 1.2rem;
                 font-weight: bold;
             }
         }
@@ -492,14 +496,20 @@ nav{
     text-align: center;
     .eduCard{
         width: 80%;
-        h1{
-            color: $base_color2;
+        h2{
+            &.section-heading {
+                color: $base_color2;
+            }
         }
         .subLine{
             width: 50%;
             height: 0.1px;
             margin: 5px auto;
             border-color: #424242;
+        }
+        p {
+            font-size: 1.2rem;
+            font-weight: bold;
         }
     }
 }
@@ -512,8 +522,10 @@ nav{
         padding: 10px;
         width: 80%;
         font-weight: 400;
-        h1{
-            color: $base_color2;
+        h2{
+            &.section-heading {
+                color: $base_color2;
+            }
         }
     }
 }
@@ -568,6 +580,35 @@ ul.cloud {
     }
 }
 
+
+.hon{
+    @include flexCenter(column, white);
+    color: rgb(66, 66, 66);
+    background-color: rgb(20, 20, 20);
+    text-align: center;
+    .honCard{
+        width: 80%;
+        h2{
+            &.section-heading {
+                color: $base_color2;
+            }
+        }
+        .subLine{
+            width: 50%;
+            height: 0.1px;
+            margin: 5px auto;
+            border-color: #424242;
+        }
+        p {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    }
+    @include mobile {
+        text-align: left;
+    }
+}
+
 #footer{
     text-align: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -576,6 +617,7 @@ ul.cloud {
     display: flex;
     background-color: $body_bg_color;
     color: #787878;
+    font-weight: bold;
     #f1{
         flex: 1;
     }

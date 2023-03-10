@@ -458,7 +458,7 @@ nav ul li:hover {
   text-align: center;
 }
 
-.summary h1 {
+.summary h2.section-heading {
   color: #1565C0;
 }
 
@@ -628,7 +628,7 @@ nav ul li:hover {
   width: 80%;
 }
 
-.exp .expCard h1 {
+.exp .expCard h2.section-heading {
   color: #1565C0;
 }
 
@@ -657,7 +657,7 @@ nav ul li:hover {
 }
 
 .exp .expCard #roles p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -702,7 +702,7 @@ nav ul li:hover {
   width: 80%;
 }
 
-.edu .eduCard h1 {
+.edu .eduCard h2.section-heading {
   color: #1565C0;
 }
 
@@ -711,6 +711,11 @@ nav ul li:hover {
   height: 0.1px;
   margin: 5px auto;
   border-color: #424242;
+}
+
+.edu .eduCard p {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .skills {
@@ -740,7 +745,7 @@ nav ul li:hover {
   font-weight: 400;
 }
 
-.skills .skillsCloud h1 {
+.skills .skillsCloud h2.section-heading {
   color: #1565C0;
 }
 
@@ -854,6 +859,53 @@ ul.cloud a[data-weight="10"] {
   }
 }
 
+.hon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+  color: #424242;
+  background-color: #141414;
+  text-align: center;
+}
+
+.hon .honCard {
+  width: 80%;
+}
+
+.hon .honCard h2.section-heading {
+  color: #1565C0;
+}
+
+.hon .honCard .subLine {
+  width: 50%;
+  height: 0.1px;
+  margin: 5px auto;
+  border-color: #424242;
+}
+
+.hon .honCard p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .hon {
+    text-align: left;
+  }
+}
+
 #footer {
   text-align: center;
   font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -864,6 +916,7 @@ ul.cloud a[data-weight="10"] {
   display: flex;
   background-color: #222222;
   color: #787878;
+  font-weight: bold;
 }
 
 #footer #f1 {
