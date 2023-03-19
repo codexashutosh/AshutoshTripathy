@@ -20,6 +20,7 @@ body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 300;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 .stop-scrolling {
@@ -68,7 +69,9 @@ nav {
           align-items: center;
   width: 100%;
   z-index: 100;
-  background-color: #141414;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
 nav .logo {
@@ -80,30 +83,56 @@ nav .logo svg {
 }
 
 nav ul {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  border-radius: 20px;
+  position: absolute;
+  right: 0;
+  top: 8vh;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 10%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  z-index: 20;
 }
 
 nav ul li {
   -webkit-transition: .3s ease;
   transition: .3s ease;
+  opacity: 0;
+  z-index: 50;
 }
 
 nav ul li a {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 500;
   text-decoration: none;
-  font-size: 25px;
-  color: #454545;
+  font-size: 50px;
+  color: #2d2d2d;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  z-index: 50;
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 20px;
+    margin-right: 25px;
+  }
 }
 
 nav ul li a:hover {
@@ -120,8 +149,18 @@ nav ul li:hover {
 }
 
 .burger {
-  display: none;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
 }
 
 .burger div {
@@ -135,56 +174,6 @@ nav ul li:hover {
 
 .line2 {
   width: 30px !important;
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    overflow-x: hidden;
-  }
-  nav ul {
-    position: absolute;
-    right: 0;
-    height: 60vh;
-    top: 8vh;
-    background-color: rgba(20, 20, 20, 0.8);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 70px;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.5s ease-in;
-    transition: -webkit-transform 0.5s ease-in;
-    transition: transform 0.5s ease-in;
-    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
-    z-index: 20;
-  }
-  nav li {
-    opacity: 0;
-  }
-  .burger {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.navbar a.active {
-  color: #b92b27;
 }
 
 .sidebar-active {
@@ -903,6 +892,7 @@ ul.cloud a[data-weight="10"] {
 @media (max-width: 480px) {
   .hon .honCard p {
     text-align: left;
+    font-size: 1rem;
   }
 }
 
