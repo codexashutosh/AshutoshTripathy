@@ -207,6 +207,32 @@ nav ul li:hover {
   }
 }
 
+@-webkit-keyframes navLinkFadeOut {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+}
+
+@keyframes navLinkFadeOut {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+}
+
 .toggle .line1 {
   -webkit-transform: rotate(405deg) translate(2px, 6px);
           transform: rotate(405deg) translate(2px, 6px);
@@ -327,15 +353,29 @@ nav ul li:hover {
 .rounded-circle {
   border-radius: 50% !important;
   display: inline-block;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 480px) {
+  .rounded-circle {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .socialIcons {
   padding: 20px 0 0 0;
-  line-height: 35px;
-  font-size: 20px;
+  line-height: 40px;
+  font-size: 25px;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .socialIcons {
+    line-height: 35px;
+    font-size: 20px;
+  }
 }
 
 .socialIcons ul {
@@ -429,9 +469,8 @@ nav ul li:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: white;
+  background: #161616;
   color: #424242;
-  background-color: #161616;
   text-align: center;
 }
 
@@ -607,7 +646,7 @@ nav ul li:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: white;
+  background: #161616;
   color: #424242;
   background-color: #161616;
   text-align: center;
@@ -681,9 +720,8 @@ nav ul li:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: white;
+  background: #141414;
   color: #424242;
-  background-color: #141414;
   text-align: center;
 }
 
@@ -722,9 +760,8 @@ nav ul li:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: white;
+  background: #141414;
   color: #424242;
-  background-color: #141414;
   text-align: center;
 }
 
@@ -863,9 +900,8 @@ ul.cloud a[data-weight="10"] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: white;
+  background: #141414;
   color: #424242;
-  background-color: #141414;
   text-align: center;
 }
 

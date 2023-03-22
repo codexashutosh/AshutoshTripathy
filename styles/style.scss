@@ -144,6 +144,16 @@ nav{
         transform: translateX(0px);
     }
 }
+@keyframes navLinkFadeOut{
+    from{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
 .toggle .line1{
     transform: rotate(405deg) translate(2px,6px);
 }
@@ -222,14 +232,22 @@ nav{
     // background-color: rgb(10, 10, 10);
     border-radius: 50%!important;
     display: inline-block;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
+    @include mobile {
+        width: 35px;
+        height: 35px;
+    }
 }
 .socialIcons{
     padding: 20px 0 0 0;
-    line-height: 35px;
-    font-size: 20px;
+    line-height: 40px;
+    font-size: 25px;
     text-align: center;
+    @include mobile {
+        line-height: 35px;
+        font-size: 20px;
+    }
     ul{
         list-style-type: none;
         margin: 0;
@@ -292,9 +310,8 @@ nav{
 }
 
 .about{
-    @include flexCenter(column, white);
+    @include flexCenter(column, rgb(22,22,22));
     color: rgb(66, 66, 66);
-    background-color: rgb(22, 22, 22);
     text-align: center;
 }
 .summary-wrap{
@@ -426,7 +443,7 @@ nav{
 }
 
 .exp{
-    @include flexCenter(column, white);
+    @include flexCenter(column, rgb(22, 22, 22));
     color: rgb(66, 66, 66);
     background-color: rgb(22, 22, 22);
     text-align: center;
@@ -480,9 +497,8 @@ nav{
 }
 
 .edu{
-    @include flexCenter(column, white);
+    @include flexCenter(column, rgb(20,20,20));
     color: rgb(66, 66, 66);
-    background-color: rgb(20, 20, 20);
     text-align: center;
     .eduCard{
         width: 80%;
@@ -504,9 +520,8 @@ nav{
     }
 }
 .skills{
-    @include flexCenter(column, white);
+    @include flexCenter(column, rgb(20, 20, 20));
     color: rgb(66, 66, 66);
-    background-color: rgb(20, 20, 20);
     text-align: center;
     .skillsCloud{
         padding: 10px;
@@ -572,9 +587,8 @@ ul.cloud {
 
 
 .hon{
-    @include flexCenter(column, white);
+    @include flexCenter(column, rgb(20, 20, 20));
     color: rgb(66, 66, 66);
-    background-color: rgb(20, 20, 20);
     text-align: center;
     .honCard{
         width: 80%;

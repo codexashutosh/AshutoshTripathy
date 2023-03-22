@@ -42,11 +42,12 @@ const navSlide =() =>{
         nav.classList.toggle('sidebar-active');
         // animate links
         navLinks.forEach((link,index) => {
-            if(link.style.animation){
-                link.style.animation = '';
+            if(link.style.animation && link.style.animation.includes("forwards")){
+                link.style.animation = `navLinkFadeOut 0.3s ease backwards ${index / 5 + 0.3}s`;
             }
             else{
-                link.style.animation = `navLinkFade 0.3s ease forwards ${index / 7 + 0.3}s`;
+                link.style.opacity = 0;
+                link.style.animation = `navLinkFade 0.3s ease forwards ${index / 5 + 0.3}s`;
             }
         });
         // burger animation
@@ -64,6 +65,3 @@ $("#loading").show().delay(1500).fadeOut(
     }
     );
     navSlide();
-    // $('.see-desc').on('click',function(){
-    //     $('.roles').slideToggle();  //swap the display of the main content with slide action
-    //   });
