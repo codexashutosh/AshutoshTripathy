@@ -310,7 +310,7 @@ nav{
 }
 
 .about{
-    @include flexCenter(column, rgb(22,22,22));
+    @include flexCenter(column, rgb(20,20,20));
     color: rgb(66, 66, 66);
     text-align: center;
 }
@@ -443,9 +443,8 @@ nav{
 }
 
 .exp{
-    @include flexCenter(column, rgb(22, 22, 22));
+    @include flexCenter(column, rgb(20,20,20));
     color: rgb(66, 66, 66);
-    background-color: rgb(22, 22, 22);
     text-align: center;
     .expCard{
         width: 80%;
