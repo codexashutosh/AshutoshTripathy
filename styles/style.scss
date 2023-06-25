@@ -626,6 +626,12 @@ ul.cloud {
     }
 }
 
+.summary-wrap, .edu .eduCard, .exp .expCard, .skillsCloud {
+    transition: 0.3s ease all;
+    &:hover {
+        box-shadow: 4px 6px 0 #2d2d2d,-4px -4px 6px 0 rgb(10,10,10),inset -4px -4px 6px 0 #2d2d2d,inset 4px 4px 6px 0 rgb(10,10,10)
+    }
+}
 
 .hon{
     @include flexCenter(column, rgb(20, 20, 20));
