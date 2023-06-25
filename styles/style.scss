@@ -15,8 +15,12 @@ body{
     font-weight: 300;
     font-size: 16px;
     overflow-x: hidden;
+    // background: linear-gradient(-45deg, #1c1c1c, #222222, #121212, #1e1d1d);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite alternate;
     
 }
+
 .stop-scrolling {
     height: 100%;
     overflow: hidden;
@@ -34,7 +38,7 @@ a:focus{
     align-items: center;
     height: 100vh;
     flex-direction: $flexCenter_direction;
-    background: $flexCenter_bg;
+    // background: $flexCenter_bg;
 }
 #loading {
     position: fixed;
@@ -676,7 +680,7 @@ ul.cloud {
 
 ::-webkit-scrollbar {
     width: 20px;
-    background-color: transparent;
+    background-color: #222222;
 }
 
 /* Track */

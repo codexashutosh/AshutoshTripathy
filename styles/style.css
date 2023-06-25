@@ -14,12 +14,14 @@
 }
 
 body {
-  background-color: #222222;
+  background-color: #151515;
   color: white;
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 300;
   font-size: 16px;
   overflow-x: hidden;
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite alternate;
 }
 
 .stop-scrolling {
@@ -199,7 +201,6 @@ nav ul li:hover {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  background: rgb(20, 20, 20);
   color: white;
 }
 
@@ -343,7 +344,6 @@ nav ul li:hover {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  background: rgb(20, 20, 20);
   color: rgb(66, 66, 66);
   text-align: center;
 }
@@ -475,7 +475,6 @@ nav ul li:hover {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  background: rgb(20, 20, 20);
   color: rgb(66, 66, 66);
   text-align: center;
 }
@@ -534,7 +533,6 @@ nav ul li:hover {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  background: rgb(20, 20, 20);
   color: rgb(66, 66, 66);
   text-align: center;
 }
@@ -564,7 +562,6 @@ nav ul li:hover {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  background: rgb(20, 20, 20);
   color: rgb(66, 66, 66);
   text-align: center;
 }
@@ -666,7 +663,6 @@ ul.cloud a[data-weight="10"] {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  background: rgb(20, 20, 20);
   color: rgb(66, 66, 66);
   text-align: center;
 }
@@ -699,7 +695,7 @@ ul.cloud a[data-weight="10"] {
   padding: 5px;
   font-size: 14px;
   display: flex;
-  background-color: #222222;
+  background-color: #151515;
   color: #787878;
   font-weight: bold;
 }
@@ -717,7 +713,7 @@ ul.cloud a[data-weight="10"] {
 /* Scroll bar*/
 ::-webkit-scrollbar {
   width: 20px;
-  background-color: transparent;
+  background-color: #222222;
 }
 
 /* Track */
