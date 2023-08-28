@@ -64,4 +64,4 @@ $("#loading").show().delay(1500).fadeOut(
         $('body').unbind('touchmove');
     }
     );
-    navSlide();
+navSlide();

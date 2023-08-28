@@ -340,6 +340,9 @@ nav{
     padding: 20px;
     width: 80%;
     box-shadow: 5px 5px 17px rgb(10,10,10), -5px -5px 17px #2d2d2d;
+    @include mobile {
+        padding: 10px;
+    }
 }
 
 .summary{
@@ -359,9 +362,6 @@ nav{
     }
     .summaryText{
         margin: 0 auto;
-        @include mobile {
-            width: 85%;
-        }
         p{
             text-align: justify;
             text-justify: inter-word;
@@ -430,10 +430,7 @@ nav{
     footer{
         font-size: 12px;
     }
-    .expCard {
-        width: 95%;
-    }
-    .eduCard {
+    .expCard, .eduCard, .pubCard {
         width: 95%;
     }
 }
@@ -625,8 +622,54 @@ ul.cloud {
         opacity: 1;
     }
 }
-
-.summary-wrap, .edu .eduCard, .exp .expCard, .skillsCloud {
+.pub{
+    @include flexCenter(column, rgb(20,20,20));
+    color: rgb(66, 66, 66);
+    text-align: center;
+    .pubCard{
+        width: 80%;
+        padding: 25px;
+        border-radius: 25px;
+        box-shadow: 5px 5px 17px rgb(10,10,10), -5px -5px 17px #2d2d2d;
+        h2{
+            &.section-heading {
+                color: $base_color2;
+            }
+        }
+        .subLine{
+            width: 50%;
+            height: 0.1px;
+            margin: 5px auto;
+            border-color: #424242;
+        }
+        p {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .publink {
+            font-size: inherit;
+            cursor: pointer !important;
+            text-decoration: none;
+            transition: 0.3s ease all;
+            color: inherit;
+            &:hover {
+                color: dodgerblue;
+            }
+            i {
+                animation: blink 1s ease infinite;
+            }
+        }
+    }
+}
+@keyframes blink{
+    0%,100% {
+        color: inherit;
+    }
+    50% {
+        color: dodgerblue;
+    }
+}
+.summary-wrap, .edu .eduCard, .exp .expCard, .skillsCloud, .pub .pubCard {
     transition: 0.3s ease all;
     &:hover {
         box-shadow: 4px 6px 0 #2d2d2d,-4px -4px 6px 0 rgb(10,10,10),inset -4px -4px 6px 0 #2d2d2d,inset 4px 4px 6px 0 rgb(10,10,10)

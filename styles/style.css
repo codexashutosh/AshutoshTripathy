@@ -355,6 +355,11 @@ nav ul li:hover {
   width: 80%;
   box-shadow: 5px 5px 17px rgb(10, 10, 10), -5px -5px 17px #2d2d2d;
 }
+@media (max-width: 480px) {
+  .summary-wrap {
+    padding: 10px;
+  }
+}
 
 .summary {
   font-family: "M PLUS Rounded 1c", sans-serif;
@@ -371,11 +376,6 @@ nav ul li:hover {
 }
 .summary .summaryText {
   margin: 0 auto;
-}
-@media (max-width: 480px) {
-  .summary .summaryText {
-    width: 85%;
-  }
 }
 .summary .summaryText p {
   text-align: justify;
@@ -439,10 +439,7 @@ nav ul li:hover {
   footer {
     font-size: 12px;
   }
-  .expCard {
-    width: 95%;
-  }
-  .eduCard {
+  .expCard, .eduCard, .pubCard {
     width: 95%;
   }
 }
@@ -657,10 +654,60 @@ ul.cloud a[data-weight="10"] {
     opacity: 1;
   }
 }
-.summary-wrap, .edu .eduCard, .exp .expCard, .skillsCloud {
+.pub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  color: rgb(66, 66, 66);
+  text-align: center;
+}
+.pub .pubCard {
+  width: 80%;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 17px rgb(10, 10, 10), -5px -5px 17px #2d2d2d;
+}
+.pub .pubCard h2.section-heading {
+  color: #1565C0;
+}
+.pub .pubCard .subLine {
+  width: 50%;
+  height: 0.1px;
+  margin: 5px auto;
+  border-color: #424242;
+}
+.pub .pubCard p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.pub .pubCard .publink {
+  font-size: inherit;
+  cursor: pointer !important;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  color: inherit;
+}
+.pub .pubCard .publink:hover {
+  color: dodgerblue;
+}
+.pub .pubCard .publink i {
+  animation: blink 1s ease infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    color: inherit;
+  }
+  50% {
+    color: dodgerblue;
+  }
+}
+.summary-wrap, .edu .eduCard, .exp .expCard, .skillsCloud, .pub .pubCard {
   transition: 0.3s ease all;
 }
-.summary-wrap:hover, .edu .eduCard:hover, .exp .expCard:hover, .skillsCloud:hover {
+.summary-wrap:hover, .edu .eduCard:hover, .exp .expCard:hover, .skillsCloud:hover, .pub .pubCard:hover {
   box-shadow: 4px 6px 0 #2d2d2d, -4px -4px 6px 0 rgb(10, 10, 10), inset -4px -4px 6px 0 #2d2d2d, inset 4px 4px 6px 0 rgb(10, 10, 10);
 }
 
