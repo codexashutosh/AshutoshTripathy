@@ -467,6 +467,26 @@ nav{
         }
         .expDetails{
             text-align: left;
+            .compDuration{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                h6 {
+                    text-align: right;
+                    @include tablet-le {
+                        text-align: left;
+                    }
+                }
+                h5, h6 {
+                    flex: 1;
+                    white-space: nowrap;
+                    @include tablet-le {
+                        flex-basis: 100%;
+                        white-space: normal;
+                    }
+                }
+            }
         }
         .see-desc{
             margin-top: 10px;

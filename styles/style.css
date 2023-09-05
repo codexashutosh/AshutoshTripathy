@@ -481,6 +481,30 @@ nav ul li:hover {
 .exp .expCard .expDetails {
   text-align: left;
 }
+.exp .expCard .expDetails .compDuration {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.exp .expCard .expDetails .compDuration h6 {
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .exp .expCard .expDetails .compDuration h6 {
+    text-align: left;
+  }
+}
+.exp .expCard .expDetails .compDuration h5, .exp .expCard .expDetails .compDuration h6 {
+  flex: 1;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .exp .expCard .expDetails .compDuration h5, .exp .expCard .expDetails .compDuration h6 {
+    flex-basis: 100%;
+    white-space: normal;
+  }
+}
 .exp .expCard .see-desc {
   margin-top: 10px;
   background-color: transparent;
