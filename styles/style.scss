@@ -21,6 +21,52 @@ body{
     
 }
 
+/* Headings */
+h1 {
+    font-size: 2.5rem; /* 40px at the base size */
+}
+
+h2 {
+    font-size: 2rem; /* 32px at the base size */
+}
+
+h3 {
+    font-size: 1.75rem; /* 28px at the base size */
+}
+
+h4 {
+    font-size: 1.5rem; /* 24px at the base size */
+}
+
+h5 {
+    font-size: 1.25rem; /* 20px at the base size */
+}
+
+h6 {
+    font-size: 1rem; /* 16px at the base size */
+}
+
+p {
+    font-size: 1rem; /* 16px at the base size */
+}
+
+.small-text {
+    font-size: 0.875rem; /* 14px at the base size */
+}
+
+@include mobile {
+    body {
+        font-size: 14px; /* Adjust for smaller screens */
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    /* Add more media queries as needed */
+}
+
 .stop-scrolling {
     height: 100%;
     overflow: hidden;
@@ -228,7 +274,6 @@ nav{
     background-color: rgb(29, 29, 29);
     font-family: 'Jura', sans-serif;
     text-align: center;
-    font-size: 18px;
     font-weight: 200;
     letter-spacing: 0.3em;
 }
@@ -328,7 +373,6 @@ nav{
 
 .about{
     @include flexCenter(column, rgb(20,20,20));
-    color: rgb(66, 66, 66);
     text-align: center;
 }
 .summary-wrap{
@@ -348,17 +392,12 @@ nav{
 .summary{
     // border-radius: 50px 0px 50px 0px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 20px;
     font-weight: 400;
     text-align: center;
     h2{
         &.section-heading {
             color: $base_color2;
         }
-    }
-    h3{
-        float: left;
-        position: absolute;
     }
     .summaryText{
         margin: 0 auto;
@@ -403,56 +442,6 @@ nav{
         width: 100%;
     }
 }
-@media only screen and (max-width: 600px){
-    .authorName{
-        font-size: 35px;
-    }
-    .subtitle{
-        // padding: 10px 10px;
-        letter-spacing: 0.2rem;
-        width: 95%;
-    }
-    .summary-wrap{
-        width: 95%;
-    }
-    .summary{
-        padding: 10px 5px;
-        font-size: 16px;
-    }
-    .skillsCloud{
-        width: 95%!important;
-        ul.cloud{
-            a{
-                font-size: calc(var(--size) * 0.20rem);
-            }
-        }
-    }
-    footer{
-        font-size: 12px;
-    }
-    .expCard, .eduCard, .pubCard {
-        width: 95%;
-    }
-}
-@media only screen and (max-width: 1024px){
-    .summary{
-        hr{
-            margin: 0 auto;
-            margin-top: 5px;
-            margin-bottom: 15px;
-        }
-    }
-    .skillsCloud {
-        hr{
-            margin: 0 auto;
-            margin-top: 5px;
-            margin-bottom: 15px;
-        }
-    }
-    #lbAfterAbtme{
-        display: none;
-    }
-}
 
 @keyframes fadeinFromBottom{
     0%{
@@ -465,7 +454,6 @@ nav{
 
 .exp{
     @include flexCenter(column, rgb(20,20,20));
-    color: rgb(66, 66, 66);
     text-align: center;
     .expCard{
         width: 80%;
@@ -476,6 +464,9 @@ nav{
             &.section-heading {
                 color: $base_color2;
             }
+        }
+        .expDetails{
+            text-align: left;
         }
         .see-desc{
             margin-top: 10px;
@@ -493,16 +484,13 @@ nav{
         }
         #roles{
             margin: 0 auto;
-            margin-top: 10px;
-            padding: 10px 20px;
-            text-align: center;
+            padding: 5px 0px;
             p {
-                font-size: 1.2rem;
-                font-weight: bold;
+                font-weight: 400;
             }
         }
         .subLine{
-            width: 50%;
+            width: 100%;
             height: 0.1px;
             margin: 5px auto;
             border-color: #424242;
@@ -521,7 +509,7 @@ nav{
 
 .edu{
     @include flexCenter(column, rgb(20,20,20));
-    color: rgb(66, 66, 66);
+    
     text-align: center;
     .eduCard{
         width: 80%;
@@ -540,14 +528,12 @@ nav{
             border-color: #424242;
         }
         p {
-            font-size: 1.2rem;
             font-weight: bold;
         }
     }
 }
 .skills{
     @include flexCenter(column, rgb(20, 20, 20));
-    color: rgb(66, 66, 66);
     text-align: center;
     .skillsCloud{
         padding: 25px;
@@ -562,17 +548,6 @@ nav{
         }
     }
 }
-@media only screen and (max-width: 600px){
-    .exp .expCard {
-        width: 95%;
-    }
-    .edu .eduCard {
-        width: 95%;
-    }
-    .socialIcons {
-        padding: 5px;
-    }
-}
 ul.cloud {
     margin: 0;
     padding: 0;
@@ -583,9 +558,7 @@ ul.cloud {
     justify-content: space-around;
     line-height: 2.5rem;
     a {
-        color: #424242;
         display: block;
-        font-size: 1.5rem;
         padding: 0.125rem 0.25rem;
         text-decoration: none;
         position: relative;
@@ -624,7 +597,6 @@ ul.cloud {
 }
 .pub{
     @include flexCenter(column, rgb(20,20,20));
-    color: rgb(66, 66, 66);
     text-align: center;
     .pubCard{
         width: 80%;
@@ -643,7 +615,6 @@ ul.cloud {
             border-color: #424242;
         }
         p {
-            font-size: 1.2rem;
             font-weight: bold;
         }
         .publink {
@@ -678,7 +649,6 @@ ul.cloud {
 
 .hon{
     @include flexCenter(column, rgb(20, 20, 20));
-    color: rgb(66, 66, 66);
     text-align: center;
     .honCard{
         width: 80%;
@@ -694,12 +664,7 @@ ul.cloud {
             border-color: #424242;
         }
         p {
-            font-size: 1.2rem;
             font-weight: bold;
-            @include mobile {
-                text-align: left;
-                font-size: 1rem;
-            }
         }
     }
 }
@@ -708,7 +673,6 @@ ul.cloud {
     text-align: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     padding: 5px;
-    font-size: 14px;
     display: flex;
     background-color: $footer_bg_color;
     color: #787878;
@@ -722,6 +686,65 @@ ul.cloud {
     a{
         text-decoration: none; 
         color: dodgerblue;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .authorName{
+        font-size: 35px;
+    }
+    .subtitle{
+        // padding: 10px 10px;
+        letter-spacing: 0.2rem;
+        width: 95%;
+    }
+    .summary-wrap{
+        width: 85%;
+    }
+    .summary{
+        padding: 10px 5px;
+    }
+    .skillsCloud{
+        width: 85%!important;
+        ul.cloud{
+            a{
+                font-size: calc(var(--size) * 0.2rem);
+                line-height: 1;
+                padding: 0;
+            }
+        }
+    }
+    .exp .expCard {
+        width: 85%;
+    }
+    .edu .eduCard {
+        width: 85%;
+    }
+    .pub .pubCard {
+        width: 85%;
+    }
+    .socialIcons {
+        padding: 5px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .summary{
+        hr{
+            margin: 0 auto;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+    }
+    .skillsCloud {
+        hr{
+            margin: 0 auto;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+    }
+    #lbAfterAbtme{
+        display: none;
     }
 }
 

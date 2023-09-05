@@ -15,7 +15,7 @@
 
 body {
   background-color: #151515;
-  color: white;
+  color: #707070;
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -24,6 +24,51 @@ body {
   animation: gradient 10s ease infinite alternate;
 }
 
+/* Headings */
+h1 {
+  font-size: 2.5rem; /* 40px at the base size */
+}
+
+h2 {
+  font-size: 2rem; /* 32px at the base size */
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px at the base size */
+}
+
+h4 {
+  font-size: 1.5rem; /* 24px at the base size */
+}
+
+h5 {
+  font-size: 1.25rem; /* 20px at the base size */
+}
+
+h6 {
+  font-size: 1rem; /* 16px at the base size */
+}
+
+p {
+  font-size: 1rem; /* 16px at the base size */
+}
+
+.small-text {
+  font-size: 0.875rem; /* 14px at the base size */
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Adjust for smaller screens */
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  /* Add more media queries as needed */
+}
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
@@ -238,7 +283,6 @@ nav ul li:hover {
   background-color: rgb(29, 29, 29);
   font-family: "Jura", sans-serif;
   text-align: center;
-  font-size: 18px;
   font-weight: 200;
   letter-spacing: 0.3em;
 }
@@ -344,7 +388,6 @@ nav ul li:hover {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  color: rgb(66, 66, 66);
   text-align: center;
 }
 
@@ -363,16 +406,11 @@ nav ul li:hover {
 
 .summary {
   font-family: "M PLUS Rounded 1c", sans-serif;
-  font-size: 20px;
   font-weight: 400;
   text-align: center;
 }
 .summary h2.section-heading {
   color: #1565C0;
-}
-.summary h3 {
-  float: left;
-  position: absolute;
 }
 .summary .summaryText {
   margin: 0 auto;
@@ -415,49 +453,6 @@ nav ul li:hover {
     width: 100%;
   }
 }
-@media only screen and (max-width: 600px) {
-  .authorName {
-    font-size: 35px;
-  }
-  .subtitle {
-    letter-spacing: 0.2rem;
-    width: 95%;
-  }
-  .summary-wrap {
-    width: 95%;
-  }
-  .summary {
-    padding: 10px 5px;
-    font-size: 16px;
-  }
-  .skillsCloud {
-    width: 95% !important;
-  }
-  .skillsCloud ul.cloud a {
-    font-size: calc(var(--size) * 0.2rem);
-  }
-  footer {
-    font-size: 12px;
-  }
-  .expCard, .eduCard, .pubCard {
-    width: 95%;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .summary hr {
-    margin: 0 auto;
-    margin-top: 5px;
-    margin-bottom: 15px;
-  }
-  .skillsCloud hr {
-    margin: 0 auto;
-    margin-top: 5px;
-    margin-bottom: 15px;
-  }
-  #lbAfterAbtme {
-    display: none;
-  }
-}
 @keyframes fadeinFromBottom {
   0% {
     transform: translateY(100%);
@@ -472,7 +467,6 @@ nav ul li:hover {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  color: rgb(66, 66, 66);
   text-align: center;
 }
 .exp .expCard {
@@ -483,6 +477,9 @@ nav ul li:hover {
 }
 .exp .expCard h2.section-heading {
   color: #1565C0;
+}
+.exp .expCard .expDetails {
+  text-align: left;
 }
 .exp .expCard .see-desc {
   margin-top: 10px;
@@ -500,16 +497,13 @@ nav ul li:hover {
 }
 .exp .expCard #roles {
   margin: 0 auto;
-  margin-top: 10px;
-  padding: 10px 20px;
-  text-align: center;
+  padding: 5px 0px;
 }
 .exp .expCard #roles p {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 400;
 }
 .exp .expCard .subLine {
-  width: 50%;
+  width: 100%;
   height: 0.1px;
   margin: 5px auto;
   border-color: #424242;
@@ -530,7 +524,6 @@ nav ul li:hover {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  color: rgb(66, 66, 66);
   text-align: center;
 }
 .edu .eduCard {
@@ -549,7 +542,6 @@ nav ul li:hover {
   border-color: #424242;
 }
 .edu .eduCard p {
-  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -559,7 +551,6 @@ nav ul li:hover {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  color: rgb(66, 66, 66);
   text-align: center;
 }
 .skills .skillsCloud {
@@ -573,17 +564,6 @@ nav ul li:hover {
   color: #1565C0;
 }
 
-@media only screen and (max-width: 600px) {
-  .exp .expCard {
-    width: 95%;
-  }
-  .edu .eduCard {
-    width: 95%;
-  }
-  .socialIcons {
-    padding: 5px;
-  }
-}
 ul.cloud {
   margin: 0;
   padding: 0;
@@ -595,9 +575,7 @@ ul.cloud {
   line-height: 2.5rem;
 }
 ul.cloud a {
-  color: #424242;
   display: block;
-  font-size: 1.5rem;
   padding: 0.125rem 0.25rem;
   text-decoration: none;
   position: relative;
@@ -660,7 +638,6 @@ ul.cloud a[data-weight="10"] {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  color: rgb(66, 66, 66);
   text-align: center;
 }
 .pub .pubCard {
@@ -679,7 +656,6 @@ ul.cloud a[data-weight="10"] {
   border-color: #424242;
 }
 .pub .pubCard p {
-  font-size: 1.2rem;
   font-weight: bold;
 }
 .pub .pubCard .publink {
@@ -717,7 +693,6 @@ ul.cloud a[data-weight="10"] {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  color: rgb(66, 66, 66);
   text-align: center;
 }
 .hon .honCard {
@@ -733,21 +708,13 @@ ul.cloud a[data-weight="10"] {
   border-color: #424242;
 }
 .hon .honCard p {
-  font-size: 1.2rem;
   font-weight: bold;
-}
-@media (max-width: 480px) {
-  .hon .honCard p {
-    text-align: left;
-    font-size: 1rem;
-  }
 }
 
 #footer {
   text-align: center;
   font-family: "M PLUS Rounded 1c", sans-serif;
   padding: 5px;
-  font-size: 14px;
   display: flex;
   background-color: #101010;
   color: #787878;
@@ -764,6 +731,56 @@ ul.cloud a[data-weight="10"] {
   color: dodgerblue;
 }
 
+@media only screen and (max-width: 600px) {
+  .authorName {
+    font-size: 35px;
+  }
+  .subtitle {
+    letter-spacing: 0.2rem;
+    width: 95%;
+  }
+  .summary-wrap {
+    width: 85%;
+  }
+  .summary {
+    padding: 10px 5px;
+  }
+  .skillsCloud {
+    width: 85% !important;
+  }
+  .skillsCloud ul.cloud a {
+    font-size: calc(var(--size) * 0.2rem);
+    line-height: 1;
+    padding: 0;
+  }
+  .exp .expCard {
+    width: 85%;
+  }
+  .edu .eduCard {
+    width: 85%;
+  }
+  .pub .pubCard {
+    width: 85%;
+  }
+  .socialIcons {
+    padding: 5px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .summary hr {
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  .skillsCloud hr {
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  #lbAfterAbtme {
+    display: none;
+  }
+}
 /* Scroll bar*/
 ::-webkit-scrollbar {
   width: 20px;
