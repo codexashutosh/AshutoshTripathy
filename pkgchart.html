@@ -21,11 +21,12 @@
             // All the code for the JS line chart will come here
             function getData() {
                 return [
-                    ['2019', 3.36],
-                    ['2020', 3.66],
-                    ['2021', 7.5],
-                    ['2022', 8.12],
-                    ['2023', 8.62]
+                    ['2019', 1],
+                    ['2020', 1.08],
+                    ['2021', 2.23],
+                    ['2022', 2.41],
+                    ['2023', 8.62],
+                    ['2023', 3.86]
                 ];
             }
             // create a data set on our data
@@ -36,12 +37,12 @@
             // create a line chart
             var chart = anychart.line();
             // configure the chart title text settings
-            chart.title('My package growth');
+            chart.title('Package Growth');
             // set the y axis title
-            chart.yAxis().title('Package (in LPA)');
+            chart.yAxis().title('Package (in X times of 1st package)');
             // create a line series with the mapped data
             var lineChart = chart.spline(seriesData);
-            lineChart.tooltip().format("{%value} LPA");
+            lineChart.tooltip().format("{%value}X");
             // set the container id for the line chart
             chart.container('container');
             // turn on the crosshair
