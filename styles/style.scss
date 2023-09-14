@@ -82,7 +82,7 @@ a:focus{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     flex-direction: $flexCenter_direction;
     // background: $flexCenter_bg;
 }
@@ -246,6 +246,7 @@ nav{
 .header{
     @include flexCenter(column, rgb(20, 20, 20));
     color: white;
+    height: 100vh;
 }
 
 #profileImg { 
@@ -307,7 +308,7 @@ nav{
     text-align: center;
     // &.sec {
     position: fixed;
-    bottom: 2vh;
+    bottom: 5vh;
     border-radius: 25px;
     background-color: rgb(20,20,20);
     padding: 10px;
@@ -391,10 +392,8 @@ nav{
     border-radius: 25px;
     padding: 20px;
     width: 80%;
-    box-shadow: 5px 5px 17px rgb(10,10,10), -5px -5px 17px #2d2d2d;
     @include mobile {
         padding: 10px;
-        box-shadow: 3px 3px 10px rgb(10,10,10), -3px -3px 10px #2d2d2d;
     }
 }
 
@@ -468,7 +467,6 @@ nav{
         width: 80%;
         padding: 20px;
         border-radius: 25px;
-        box-shadow: 5px 5px 17px rgb(10,10,10), -5px -5px 17px #2d2d2d;
         h2{
             &.section-heading {
                 color: $base_color2;
@@ -524,9 +522,6 @@ nav{
             margin: 5px auto;
             border-color: #424242;
         }
-        @include mobile {
-            box-shadow: 3px 3px 10px rgb(10,10,10), -3px -3px 10px #2d2d2d;
-        }
     }
 }
 
@@ -541,13 +536,11 @@ nav{
 
 .edu{
     @include flexCenter(column, rgb(20,20,20));
-    
     text-align: center;
     .eduCard{
         width: 80%;
         padding: 25px;
         border-radius: 25px;
-        box-shadow: 5px 5px 17px rgb(10,10,10), -5px -5px 17px #2d2d2d;
         h2{
             &.section-heading {
                 color: $base_color2;
@@ -562,9 +555,6 @@ nav{
         p {
             font-weight: bold;
         }
-        @include mobile {
-            box-shadow: 3px 3px 10px rgb(10,10,10), -3px -3px 10px #2d2d2d;
-        }
     }
 }
 .skills{
@@ -573,16 +563,12 @@ nav{
     .skillsCloud{
         padding: 25px;
         border-radius: 25px;
-        box-shadow: 5px 5px 17px rgb(10,10,10), -5px -5px 17px #2d2d2d;
         width: 80%;
         font-weight: 400;
         h2{
             &.section-heading {
                 color: $base_color2;
             }
-        }
-        @include mobile {
-            box-shadow: 3px 3px 10px rgb(10,10,10), -3px -3px 10px #2d2d2d;
         }
     }
 }
@@ -640,7 +626,6 @@ ul.cloud {
         width: 80%;
         padding: 25px;
         border-radius: 25px;
-        box-shadow: 5px 5px 17px rgb(10,10,10), -5px -5px 17px #2d2d2d;
         h2{
             &.section-heading {
                 color: $base_color2;
@@ -668,9 +653,6 @@ ul.cloud {
                 animation: blink 1s ease infinite;
             }
         }
-        @include mobile {
-            box-shadow: 3px 3px 10px rgb(10,10,10), -3px -3px 10px #2d2d2d;
-        }
     }
 }
 @keyframes blink{
@@ -681,12 +663,15 @@ ul.cloud {
         color: dodgerblue;
     }
 }
-.summary-wrap, .edu .eduCard, .exp .expCard, .skillsCloud, .pub .pubCard {
+.hover-effect {
     transition: 0.3s ease all;
+    margin: 8vh;
+    box-shadow: 5px 5px 17px rgb(10,10,10), -5px -5px 17px #2d2d2d;
     &:hover {
         box-shadow: 4px 6px 0 #2d2d2d,-4px -4px 6px 0 rgb(10,10,10),inset -4px -4px 6px 0 #2d2d2d,inset 4px 4px 6px 0 rgb(10,10,10)
     }
     @include mobile {
+        box-shadow: 3px 3px 10px rgb(10,10,10), -3px -3px 10px #2d2d2d;
         &:hover {
             box-shadow: 3px 3px 10px rgb(10,10,10), -3px -3px 10px #2d2d2d;
         }
@@ -720,6 +705,7 @@ ul.cloud {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     padding: 5px;
     display: flex;
+    margin-top: 5vh;
     background-color: $footer_bg_color;
     color: #787878;
     font-weight: bold;
@@ -732,6 +718,11 @@ ul.cloud {
     a{
         text-decoration: none; 
         color: dodgerblue;
+    }
+    @include mobile {
+        #f1, #f2 {
+            font-size: 12px;
+        }
     }
 }
 

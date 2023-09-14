@@ -252,9 +252,10 @@ nav ul li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   color: white;
+  height: 100vh;
 }
 
 #profileImg {
@@ -317,7 +318,7 @@ nav ul li:hover {
   font-size: 25px;
   text-align: center;
   position: fixed;
-  bottom: 2vh;
+  bottom: 5vh;
   border-radius: 25px;
   background-color: rgb(20, 20, 20);
   padding: 10px;
@@ -394,7 +395,7 @@ nav ul li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   text-align: center;
 }
@@ -404,12 +405,10 @@ nav ul li:hover {
   border-radius: 25px;
   padding: 20px;
   width: 80%;
-  box-shadow: 5px 5px 17px rgb(10, 10, 10), -5px -5px 17px #2d2d2d;
 }
 @media (max-width: 480px) {
   .summary-wrap {
     padding: 10px;
-    box-shadow: 3px 3px 10px rgb(10, 10, 10), -3px -3px 10px #2d2d2d;
   }
 }
 
@@ -474,7 +473,7 @@ nav ul li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   text-align: center;
 }
@@ -482,7 +481,6 @@ nav ul li:hover {
   width: 80%;
   padding: 20px;
   border-radius: 25px;
-  box-shadow: 5px 5px 17px rgb(10, 10, 10), -5px -5px 17px #2d2d2d;
 }
 .exp .expCard h2.section-heading {
   color: #1565C0;
@@ -541,11 +539,6 @@ nav ul li:hover {
   margin: 5px auto;
   border-color: #424242;
 }
-@media (max-width: 480px) {
-  .exp .expCard {
-    box-shadow: 3px 3px 10px rgb(10, 10, 10), -3px -3px 10px #2d2d2d;
-  }
-}
 
 .separator {
   border: 1px solid #424242;
@@ -560,7 +553,7 @@ nav ul li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   text-align: center;
 }
@@ -568,7 +561,6 @@ nav ul li:hover {
   width: 80%;
   padding: 25px;
   border-radius: 25px;
-  box-shadow: 5px 5px 17px rgb(10, 10, 10), -5px -5px 17px #2d2d2d;
 }
 .edu .eduCard h2.section-heading {
   color: #1565C0;
@@ -582,34 +574,23 @@ nav ul li:hover {
 .edu .eduCard p {
   font-weight: bold;
 }
-@media (max-width: 480px) {
-  .edu .eduCard {
-    box-shadow: 3px 3px 10px rgb(10, 10, 10), -3px -3px 10px #2d2d2d;
-  }
-}
 
 .skills {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   text-align: center;
 }
 .skills .skillsCloud {
   padding: 25px;
   border-radius: 25px;
-  box-shadow: 5px 5px 17px rgb(10, 10, 10), -5px -5px 17px #2d2d2d;
   width: 80%;
   font-weight: 400;
 }
 .skills .skillsCloud h2.section-heading {
   color: #1565C0;
-}
-@media (max-width: 480px) {
-  .skills .skillsCloud {
-    box-shadow: 3px 3px 10px rgb(10, 10, 10), -3px -3px 10px #2d2d2d;
-  }
 }
 
 ul.cloud {
@@ -684,7 +665,7 @@ ul.cloud a[data-weight="10"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   text-align: center;
 }
@@ -692,7 +673,6 @@ ul.cloud a[data-weight="10"] {
   width: 80%;
   padding: 25px;
   border-radius: 25px;
-  box-shadow: 5px 5px 17px rgb(10, 10, 10), -5px -5px 17px #2d2d2d;
 }
 .pub .pubCard h2.section-heading {
   color: #1565C0;
@@ -719,11 +699,6 @@ ul.cloud a[data-weight="10"] {
 .pub .pubCard .publink i {
   animation: blink 1s ease infinite;
 }
-@media (max-width: 480px) {
-  .pub .pubCard {
-    box-shadow: 3px 3px 10px rgb(10, 10, 10), -3px -3px 10px #2d2d2d;
-  }
-}
 
 @keyframes blink {
   0%, 100% {
@@ -733,14 +708,19 @@ ul.cloud a[data-weight="10"] {
     color: dodgerblue;
   }
 }
-.summary-wrap, .edu .eduCard, .exp .expCard, .skillsCloud, .pub .pubCard {
+.hover-effect {
   transition: 0.3s ease all;
+  margin: 8vh;
+  box-shadow: 5px 5px 17px rgb(10, 10, 10), -5px -5px 17px #2d2d2d;
 }
-.summary-wrap:hover, .edu .eduCard:hover, .exp .expCard:hover, .skillsCloud:hover, .pub .pubCard:hover {
+.hover-effect:hover {
   box-shadow: 4px 6px 0 #2d2d2d, -4px -4px 6px 0 rgb(10, 10, 10), inset -4px -4px 6px 0 #2d2d2d, inset 4px 4px 6px 0 rgb(10, 10, 10);
 }
 @media (max-width: 480px) {
-  .summary-wrap:hover, .edu .eduCard:hover, .exp .expCard:hover, .skillsCloud:hover, .pub .pubCard:hover {
+  .hover-effect {
+    box-shadow: 3px 3px 10px rgb(10, 10, 10), -3px -3px 10px #2d2d2d;
+  }
+  .hover-effect:hover {
     box-shadow: 3px 3px 10px rgb(10, 10, 10), -3px -3px 10px #2d2d2d;
   }
 }
@@ -749,7 +729,7 @@ ul.cloud a[data-weight="10"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   text-align: center;
 }
@@ -774,6 +754,7 @@ ul.cloud a[data-weight="10"] {
   font-family: "M PLUS Rounded 1c", sans-serif;
   padding: 5px;
   display: flex;
+  margin-top: 5vh;
   background-color: #101010;
   color: #787878;
   font-weight: bold;
@@ -787,6 +768,11 @@ ul.cloud a[data-weight="10"] {
 #footer a {
   text-decoration: none;
   color: dodgerblue;
+}
+@media (max-width: 480px) {
+  #footer #f1, #footer #f2 {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
