@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: #151515;
+  background-color: #1a1a1a;
   color: #707070;
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 300;
@@ -289,7 +289,7 @@ nav ul li:hover {
 
 .subtitle {
   padding: 15px 25px;
-  background-color: rgb(29, 29, 29);
+  background-color: rgb(40, 40, 40);
   font-family: "Jura", sans-serif;
   text-align: center;
   font-weight: 200;
@@ -320,7 +320,7 @@ nav ul li:hover {
   position: fixed;
   bottom: 5vh;
   border-radius: 25px;
-  background-color: rgb(20, 20, 20);
+  background-color: #1a1a1a;
   padding: 10px;
   z-index: 3;
   box-shadow: 5px 5px 7px rgb(10, 10, 10), -5px -5px 7px #2d2d2d;
