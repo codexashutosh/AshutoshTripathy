@@ -18,40 +18,36 @@
     <body>
         <div id="container"></div>
         <script>
-            // All the code for the JS line chart will come here
-            function getData() {
-                return [
-                    ['2019', 1],
-                    ['2020', 1.08],
-                    ['2021', 2.23],
-                    ['2022', 2.41],
-                    ['2023', 8.62],
-                    ['2023', 3.86]
-                ];
-            }
-            // create a data set on our data
-            var dataSet = anychart.data.set(getData());
-            // map data for the line chart,
-            // take x from the zero column and value from the first column
-            var seriesData = dataSet.mapAs({ x: 0, value: 1 });
-            // create a line chart
-            var chart = anychart.line();
-            // configure the chart title text settings
+            var data = [
+                {x: "2019", value: 1, token: "My initial package"},
+                {x: "2020", value: 1.08, token: "1.08 times my initial pkg"},              
+                //{x: "2021", value: 1.14, token: "1.14 times my initial pkg"},
+                {x: "2021", value: 2.23, token: "2.23 times my initial pkg"},
+                {x: "2022", value: 2.42, token: "2.42 times my initial pkg"},
+                //{x: "2023", value: 2.56, token: "2.56 times my initial pkg"},
+                {x: "2023", value: 4.2, token: "4.2 times my initial pkg"}
+            ];
+            var chart = anychart.stepLine();
             chart.title('Package Growth');
-            // set the y axis title
-            chart.yAxis().title('Package (in X times of 1st package)');
-            // create a line series with the mapped data
-            var lineChart = chart.spline(seriesData);
-            lineChart.tooltip().format("{%value}X");
-            // set the container id for the line chart
+            chart.title().fontColor("white")
+            // chart.xScale().mode('continuous');
+            chart.yAxis().title('Package (in X times of my initial package)');
+            chart.yAxis().title().fontColor("white");
+            chart.yAxis().labels().format("{%value}");
+            chart.yAxis().labels().fontColor("white");
+            chart.xAxis().labels().fontColor("white");
+            var stepChart = chart.stepLine(data);
+            stepChart.stepDirection("forward");
+            stepChart.normal().stroke("dodgerblue");
+            stepChart.tooltip().title().text("Increament");
+            stepChart.tooltip().format("{%token}");
             chart.container('container');
-            // turn on the crosshair
-            chart.crosshair().enabled(true).yLabel(false).yStroke(null);
-            // turn on the line chart animation
+            chart.background().fill({
+                keys: ["#333333", "#202020", "#0e0e0e"],
+                angle: 130,
+              });
             chart.animation(true);
-            // draw the line chart
             chart.draw();
-
         </script>
     </body>
 
