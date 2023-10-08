@@ -534,6 +534,88 @@ nav{
     margin: 0 auto;
 }
 
+.art{
+    @include flexCenter(column, rgb(20,20,20));
+    text-align: center;
+    .artCard{
+        width: 80%;
+        padding: 25px;
+        border-radius: 25px;
+        h2{
+            &.section-heading {
+                color: $base_color2;
+            }
+        }
+        .subLine{
+            width: 50%;
+            height: 0.1px;
+            margin: 5px auto;
+            border-color: #424242;
+        }
+        p {
+            font-weight: bold;
+        }
+        .artBox{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .artImg {
+                position: relative;
+                height: auto;
+                max-width: 48%;
+                background-color: grey;
+                float: left;
+                border: 1px solid black;
+                margin-bottom: 20px;
+                overflow: hidden;
+                transition: 0.3s ease all;
+                border-radius: 20px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: 0.3s ease all;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                    // &:hover + .label{
+                    //     opacity: 0;
+                    // }
+                    @include mobile {
+                        &:hover{
+                            transform: scale(1);
+                        }
+                        // &:hover + .label{
+                        //     opacity: 1;
+                        // }
+                    }
+                }
+                .label{
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    left: 0;
+                    bottom: 0;
+                    opacity: 1;
+                    color: white;
+                    font-weight: lighter;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    width: 100%;
+                    background-color: rgba(0,0,0,.7);
+                    transition: 0.3s ease all;
+                    text-align: center;
+                }
+                @include mobile {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
 .edu{
     @include flexCenter(column, rgb(20,20,20));
     text-align: center;
@@ -668,7 +750,7 @@ ul.cloud {
     margin: 8vh;
     box-shadow: 5px 5px 17px rgb(10,10,10), -5px -5px 17px #2d2d2d;
     &:hover {
-        box-shadow: 4px 6px 0 #2d2d2d,-4px -4px 6px 0 rgb(10,10,10),inset -4px -4px 6px 0 #2d2d2d,inset 4px 4px 6px 0 rgb(10,10,10)
+        box-shadow: 4px 6px 0 #2d2d2d,-4px -4px 6px 0 rgb(10,10,10),inset -4px -4px 6px 0 #2d2d2d,inset 4px 4px 6px 0 rgb(10,10,10);
     }
     @include mobile {
         box-shadow: 3px 3px 10px rgb(10,10,10), -3px -3px 10px #2d2d2d;
@@ -758,6 +840,9 @@ ul.cloud {
         width: 85%;
     }
     .pub .pubCard {
+        width: 85%;
+    }
+    .art .artCard {
         width: 85%;
     }
     .socialIcons {

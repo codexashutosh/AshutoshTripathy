@@ -65,3 +65,19 @@ $("#loading").show().delay(1500).fadeOut(
     }
     );
 navSlide();
+
+const expandButtons = document.querySelectorAll(".expand-button");
+const artImg = document.querySelector(".artImg");
+
+expandButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const enlargedImage = button.closest(".enlarged-image");
+    enlargedImage.classList.toggle("enlarged");
+  });
+});
+
+artImg.addEventListener("click", (e) => {
+  if (e.target.classList.contains("enlarged")) {
+    e.target.classList.remove("enlarged");
+  }
+});
