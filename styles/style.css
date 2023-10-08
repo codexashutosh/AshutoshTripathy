@@ -624,6 +624,11 @@ nav ul li:hover {
   text-align: center;
 }
 @media (max-width: 480px) {
+  .art .artCard .artBox .artImg .label {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
   .art .artCard .artBox .artImg {
     max-width: 100%;
   }
