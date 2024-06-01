@@ -135,7 +135,7 @@ nav{
                 font-family: 'M PLUS Rounded 1c', sans-serif;
                 font-weight: 500;
                 text-decoration: none;
-                font-size: 50px;
+                font-size: 30px;
                 color: rgb(45, 45, 45);
                 transition: all 0.3s ease;
                 z-index: 50;
@@ -417,6 +417,47 @@ nav{
     
 }
 
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .card {
+        width: 30%;
+        display: flex;
+        padding: 1rem;
+        margin: 1rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px;
+        box-shadow:  5px 5px 17px rgb(10, 10, 10), -5px -5px 17px #2d2d2d;
+        img {
+            height: 100px;
+            width: 100px;
+            object-fit: contain;
+        }
+        p {
+            text-align: center;
+            padding: 0.5rem 0;
+            font-size: 1rem;
+            color: darkgrey;
+            &.card-label {
+                color: lightgray;
+                font-size: 1.1rem;
+            }
+        }
+        &:hover {
+            // background-color: rgba(50, 50, 50, 0.5); 
+            // box-shadow: 0 0 10px rgb(108, 108, 108); 
+            box-shadow: 4px 6px 0 #2d2d2d, -4px -4px 6px 0 rgb(10, 10, 10), inset -4px -4px 6px 0 #2d2d2d, inset 4px 4px 6px 0 rgb(10, 10, 10);
+            transition: all 0.3s ease; 
+        }
+        @include mobile {
+            width: 100%;
+        }
+    }
+}
+
 .animatedLine{
     border: none;
     background: linear-gradient(-45deg, $base_color, $base_color2);
@@ -598,7 +639,7 @@ nav{
                     left: 0;
                     bottom: 0;
                     opacity: 1;
-                    color: white;
+                    color: #e65858;
                     font-weight: lighter;
                     font-size: 1rem;
                     font-weight: bold;
@@ -636,9 +677,6 @@ nav{
             height: 0.1px;
             margin: 5px auto;
             border-color: #424242;
-        }
-        p {
-            font-weight: bold;
         }
     }
 }
@@ -752,14 +790,14 @@ ul.cloud {
     transition: 0.3s ease all;
     margin: 8vh;
     box-shadow: 5px 5px 17px rgb(10,10,10), -5px -5px 17px #2d2d2d;
-    &:hover {
-        box-shadow: 4px 6px 0 #2d2d2d,-4px -4px 6px 0 rgb(10,10,10),inset -4px -4px 6px 0 #2d2d2d,inset 4px 4px 6px 0 rgb(10,10,10);
-    }
+    // &:hover {
+    //     box-shadow: 4px 6px 0 #2d2d2d,-4px -4px 6px 0 rgb(10,10,10),inset -4px -4px 6px 0 #2d2d2d,inset 4px 4px 6px 0 rgb(10,10,10);
+    // }
     @include mobile {
         box-shadow: 3px 3px 10px rgb(10,10,10), -3px -3px 10px #2d2d2d;
-        &:hover {
-            box-shadow: 3px 3px 10px rgb(10,10,10), -3px -3px 10px #2d2d2d;
-        }
+        // &:hover {
+        //     box-shadow: 3px 3px 10px rgb(10,10,10), -3px -3px 10px #2d2d2d;
+        // }
     }
 }
 

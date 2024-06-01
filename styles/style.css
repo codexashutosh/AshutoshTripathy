@@ -136,7 +136,7 @@ nav ul li a {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 500;
   text-decoration: none;
-  font-size: 50px;
+  font-size: 30px;
   color: rgb(45, 45, 45);
   transition: all 0.3s ease;
   z-index: 50;
@@ -428,6 +428,48 @@ nav ul li:hover {
   text-justify: inter-word;
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.cards .card {
+  width: 30%;
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 5px 5px 17px rgb(10, 10, 10), -5px -5px 17px #2d2d2d;
+}
+.cards .card img {
+  height: 100px;
+  width: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.cards .card p {
+  text-align: center;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: darkgrey;
+}
+.cards .card p.card-label {
+  color: lightgray;
+  font-size: 1.1rem;
+}
+.cards .card:hover {
+  box-shadow: 4px 6px 0 #2d2d2d, -4px -4px 6px 0 rgb(10, 10, 10), inset -4px -4px 6px 0 #2d2d2d, inset 4px 4px 6px 0 rgb(10, 10, 10);
+  transition: all 0.3s ease;
+}
+@media (max-width: 480px) {
+  .cards .card {
+    width: 100%;
+  }
+}
+
 .animatedLine {
   border: none;
   background: linear-gradient(-45deg, #b92b27, #1565C0);
@@ -614,7 +656,7 @@ nav ul li:hover {
   left: 0;
   bottom: 0;
   opacity: 1;
-  color: white;
+  color: #e65858;
   font-weight: lighter;
   font-size: 1rem;
   font-weight: bold;
@@ -655,9 +697,6 @@ nav ul li:hover {
   height: 0.1px;
   margin: 5px auto;
   border-color: #424242;
-}
-.edu .eduCard p {
-  font-weight: bold;
 }
 
 .skills {
@@ -798,14 +837,8 @@ ul.cloud a[data-weight="10"] {
   margin: 8vh;
   box-shadow: 5px 5px 17px rgb(10, 10, 10), -5px -5px 17px #2d2d2d;
 }
-.hover-effect:hover {
-  box-shadow: 4px 6px 0 #2d2d2d, -4px -4px 6px 0 rgb(10, 10, 10), inset -4px -4px 6px 0 #2d2d2d, inset 4px 4px 6px 0 rgb(10, 10, 10);
-}
 @media (max-width: 480px) {
   .hover-effect {
-    box-shadow: 3px 3px 10px rgb(10, 10, 10), -3px -3px 10px #2d2d2d;
-  }
-  .hover-effect:hover {
     box-shadow: 3px 3px 10px rgb(10, 10, 10), -3px -3px 10px #2d2d2d;
   }
 }
