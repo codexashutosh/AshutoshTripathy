@@ -46,11 +46,11 @@ h5 {
 }
 
 h6 {
-  font-size: 1rem; /* 16px at the base size */
+  font-size: 1.15rem;
 }
 
 p {
-  font-size: 1rem; /* 16px at the base size */
+  font-size: 1.15rem;
 }
 
 .small-text {
@@ -384,10 +384,11 @@ nav ul li:hover {
   font-family: "Poppins", sans-serif;
   transition: all 0.3s ease;
   width: 130px;
-  box-shadow: inset 0px 0px 10px rgb(10, 10, 10), inset 0px 0px 10px rgb(10, 10, 10);
+  box-shadow: 0px 0px 7px rgb(10, 10, 10), 0px 0px 7px rgb(10, 10, 10);
+  animation: slideRight 3s linear infinite;
 }
 .bannerBtn .button:hover {
-  box-shadow: 0px 0px 7px rgb(10, 10, 10), 0px 0px 7px rgb(10, 10, 10);
+  box-shadow: inset 0px 0px 10px rgb(10, 10, 10), inset 0px 0px 10px rgb(10, 10, 10);
   color: rgb(200, 200, 200);
 }
 
@@ -511,6 +512,18 @@ nav ul li:hover {
     transform: translateY(100%);
   }
 }
+.blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  padding: 8vh;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
 .exp {
   display: flex;
   justify-content: center;
@@ -978,12 +991,12 @@ ul.cloud a[data-weight="10"] {
 }
 
 /* extras */
-h2 .fas {
+h3 .fas {
   cursor: pointer !important;
-  color: #1565C0;
+  color: #b92b27;
   transition: all 0.3s ease;
   text-shadow: 1px 1px 2px #424242;
 }
-h2 .fas:hover {
-  color: #b92b27;
+h3 .fas:hover {
+  color: #1565C0;
 }/*# sourceMappingURL=style.css.map */

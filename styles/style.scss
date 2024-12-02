@@ -43,11 +43,11 @@ h5 {
 }
 
 h6 {
-    font-size: 1rem; /* 16px at the base size */
+    font-size: 1.15rem;
 }
 
 p {
-    font-size: 1rem; /* 16px at the base size */
+    font-size: 1.15rem;
 }
 
 .small-text {
@@ -356,7 +356,6 @@ nav{
     }
 }
 .bannerBtn{
-    // text-transform: uppercase;
     font-weight: 300;
     font-size: 14px;
     padding: 20px 0px;
@@ -372,10 +371,11 @@ nav{
         font-family: 'Poppins', sans-serif;
         transition: all 0.3s ease;
         width: 130px;
-        box-shadow: inset 0px 0px 10px rgb(10, 10, 10), inset 0px 0px 10px rgb(10, 10, 10);
+        box-shadow: 0px 0px 7px rgb(10, 10, 10), 0px 0px 7px rgb(10, 10, 10);
+        animation: slideRight 3s linear infinite;
     }
     .button:hover{
-        box-shadow: 0px 0px 7px rgb(10, 10, 10), 0px 0px 7px rgb(10, 10, 10);
+        box-shadow: inset 0px 0px 10px rgb(10, 10, 10), inset 0px 0px 10px rgb(10, 10, 10);
         color: rgb(200, 200, 200);
     }
 }
@@ -499,6 +499,14 @@ nav{
     0%{
         transform: translateY(100%);
     }
+}
+
+.blog{
+    @include flexCenter(column, rgb(20,20,20));
+    text-align: center;
+    padding: 8vh;
+    font-size: 1.1rem;
+    font-weight: normal;
 }
 
 .exp{
@@ -943,14 +951,14 @@ ul.cloud {
 }
 
 /* extras */
-h2{
+h3{
     .fas{
         cursor: pointer !important;
-        color: $base_color2;
+        color: #b92b27;
         transition: all .3s ease;
         text-shadow: 1px 1px 2px #424242;
         &:hover{
-            color: #b92b27;
+            color: $base_color2;
         }
     }
 }

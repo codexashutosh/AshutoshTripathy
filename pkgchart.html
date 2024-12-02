@@ -19,19 +19,18 @@
         <div id="container"></div>
         <script>
             var data = [
-                {x: "2019", value: 1, token: "My initial package"},
-                {x: "2020", value: 1.08, token: "1.08 times my initial pkg"},              
-                //{x: "2021", value: 1.14, token: "1.14 times my initial pkg"},
-                {x: "2021", value: 2.23, token: "2.23 times my initial pkg"},
-                {x: "2022", value: 2.42, token: "2.42 times my initial pkg"},
-                //{x: "2023", value: 2.56, token: "2.56 times my initial pkg"},
-                {x: "2023", value: 4.2, token: "4.2 times my initial pkg"}
+                {x: "2019", value: 1, token: "Initial package"},
+                {x: "2020", value: 1.08, token: "1.08x Initial pkg"},              
+                {x: "2021", value: 2.23, token: "2.23x Initial pkg"},
+                {x: "2022", value: 2.42, token: "2.42x Initial pkg"},
+                {x: "2023", value: 4.16, token: "4.16x Initial pkg"},
+                {x: "2024", value: 6.55, token: "6.55x Initial pkg"}
             ];
             var chart = anychart.stepLine();
             chart.title('Package Growth');
             chart.title().fontColor("white")
             // chart.xScale().mode('continuous');
-            chart.yAxis().title('Package (in X times of my initial package)');
+            chart.yAxis().title('Package (in n times of Initial package)');
             chart.yAxis().title().fontColor("white");
             chart.yAxis().labels().format("{%value}");
             chart.yAxis().labels().fontColor("white");
