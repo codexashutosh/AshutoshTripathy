@@ -1,7 +1,7 @@
 <html>
-
     <head>
         <title>My Pkg Growth</title>
+        <script src="https://kit.fontawesome.com/1195c8d3a8.js" crossorigin="anonymous"></script>
         <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js"></script>
         <style type="text/css">
             html,
@@ -12,10 +12,24 @@
                 margin: 0;
                 padding: 0;
             }
+            body {
+                background-color: #151515;
+            }
+            .button {
+                position: absolute;
+                text-decoration: none;
+                color: #b92b27;
+                padding: 10px;
+                font-size: 1.2rem;
+                z-index: 2;
+            }
+            .button:hover{
+                opacity: 0.8;
+            }
         </style>
     </head>
-
     <body>
+        <a class="button" href="../index.html"><i class="fa fa-backward"></i> Back to home</a>
         <div id="container"></div>
         <script>
             var data = [
@@ -49,5 +63,4 @@
             chart.draw();
         </script>
     </body>
-
 </html>
