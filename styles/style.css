@@ -220,7 +220,6 @@ nav ul li:hover {
   font-weight: 700;
   display: flex;
   flex: 1;
-  text-transform: uppercase;
   letter-spacing: 2px;
   justify-content: flex-start;
   align-items: center;
