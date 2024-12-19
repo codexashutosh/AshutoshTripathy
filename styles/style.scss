@@ -379,6 +379,9 @@ nav{
         box-shadow: inset 0px 0px 10px rgb(10, 10, 10), inset 0px 0px 10px rgb(10, 10, 10);
         color: rgb(200, 200, 200);
     }
+    &.blog-back{
+        padding: 8vh 30px 30px 30px;
+    }
 }
 
 .about{
@@ -434,7 +437,7 @@ nav{
     flex-wrap: wrap;
     justify-content: space-evenly;
     .card {
-        width: 30%;
+        width: 35%;
         display: flex;
         padding: 1rem;
         margin: 1rem;
@@ -447,6 +450,11 @@ nav{
             height: 100px;
             width: 100px;
             object-fit: contain;
+            &.blog-thumbnail {
+                height: auto;
+                width: 200px;
+                filter: grayscale(100%);
+            }
         }
         p {
             text-align: center;
@@ -456,13 +464,19 @@ nav{
             &.card-label {
                 color: lightgray;
                 font-size: 1.1rem;
+                &.blog-card {
+                    text-align: left;
+                    text-decoration: underline;
+                }
             }
         }
         &:hover {
-            // background-color: rgba(50, 50, 50, 0.5); 
-            // box-shadow: 0 0 10px rgb(108, 108, 108); 
             box-shadow: 4px 6px 0 #2d2d2d, -4px -4px 6px 0 rgb(10, 10, 10), inset -4px -4px 6px 0 #2d2d2d, inset 4px 4px 6px 0 rgb(10, 10, 10);
             transition: all 0.3s ease; 
+            .blog-thumbnail {
+                filter: grayscale(0%);
+            }
+            cursor: pointer;
         }
         @include mobile {
             width: 100%;
@@ -516,9 +530,37 @@ nav{
 .blog{
     @include flexCenter(column, rgb(20,20,20));
     text-align: center;
-    padding: 8vh;
     font-size: 1.1rem;
     font-weight: normal;
+}
+
+.post{
+    @include flexCenter(column, rgb(20,20,20));
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding: 20px;
+    .blog-content {
+        display: flex;
+        gap: 20px;
+        @include tablet {
+            flex-direction: column;
+        }
+        .text-content {
+            .post-img {
+                width: 50%;
+                @include tablet {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    h1 {
+        text-transform: uppercase;
+    }
+    .author-label {
+        margin-bottom: 20px;
+    }
 }
 
 .exp{

@@ -392,6 +392,9 @@ nav ul li:hover {
   box-shadow: inset 0px 0px 10px rgb(10, 10, 10), inset 0px 0px 10px rgb(10, 10, 10);
   color: rgb(200, 200, 200);
 }
+.bannerBtn.blog-back {
+  padding: 8vh 30px 30px 30px;
+}
 
 .about {
   display: flex;
@@ -448,7 +451,7 @@ nav ul li:hover {
   justify-content: space-evenly;
 }
 .cards .card {
-  width: 30%;
+  width: 35%;
   display: flex;
   padding: 1rem;
   margin: 1rem;
@@ -464,6 +467,11 @@ nav ul li:hover {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.cards .card img.blog-thumbnail {
+  height: auto;
+  width: 200px;
+  filter: grayscale(100%);
+}
 .cards .card p {
   text-align: center;
   padding: 0.5rem 0;
@@ -474,9 +482,17 @@ nav ul li:hover {
   color: lightgray;
   font-size: 1.1rem;
 }
+.cards .card p.card-label.blog-card {
+  text-align: left;
+  text-decoration: underline;
+}
 .cards .card:hover {
   box-shadow: 4px 6px 0 #2d2d2d, -4px -4px 6px 0 rgb(10, 10, 10), inset -4px -4px 6px 0 #2d2d2d, inset 4px 4px 6px 0 rgb(10, 10, 10);
   transition: all 0.3s ease;
+  cursor: pointer;
+}
+.cards .card:hover .blog-thumbnail {
+  filter: grayscale(0%);
 }
 @media (max-width: 480px) {
   .cards .card {
@@ -532,9 +548,43 @@ nav ul li:hover {
   height: 100%;
   flex-direction: column;
   text-align: center;
-  padding: 8vh;
   font-size: 1.1rem;
   font-weight: normal;
+}
+
+.post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: normal;
+  padding: 20px;
+}
+.post .blog-content {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 1024px) {
+  .post .blog-content {
+    flex-direction: column;
+  }
+}
+.post .blog-content .text-content .post-img {
+  width: 50%;
+}
+@media (max-width: 1024px) {
+  .post .blog-content .text-content .post-img {
+    width: 100%;
+  }
+}
+.post h1 {
+  text-transform: uppercase;
+}
+.post .author-label {
+  margin-bottom: 20px;
 }
 
 .exp {

@@ -34,6 +34,12 @@
     }
 }
 
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
 /* For Excluding  Tablets Ipads */
 @mixin ex-tablet {
     @media (min-width: 1024px) {

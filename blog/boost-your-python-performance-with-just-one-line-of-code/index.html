@@ -3,16 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Ashutosh Tripathy | codexashutosh">
-        <meta property="og:description" content="Hi! I am an SDE at KPMG and this is my portfolio.">
-        <meta property="og:image" content="https://ashutoshtripathy.com/images/ogLogo.png">
-        <meta property="og:url" content="https://ashutoshtripathy.com/blog/">
+        <meta property="og:title" content="Boost Your Python Performance with Just One Line of Code">
+        <meta property="og:description" content="Boost Your Python Performance with Just One Line of Code">
+        <meta property="og:image" content="https://ashutoshtripathy.com/images/blog/thumbnails/lru_cache.jpg">
+        <meta property="og:url" content="https://ashutoshtripathy.com/blog/boost-your-python-performance-with-just-one-line-of-code">
+        <meta property="og:type" content="article">
         <meta name="keywords"
         content="codexashutosh, Ashutosh Tripathy, codexashutosh.com, Pythoneer, Ashutosh Tripathy CV, Ashutosh Tripathy Resume, Ashutosh Tripathy Portfolio, Ashutosh Tripathi, Ashutosh Tripathi CV, Ashutosh Tripathi Resume, Ashutosh Tripathi Portfolio, Python Fullstack Data Engineer, Python Consultant, Python Developer, ashutoshtripathy.com, ashutoshtripathi.com, free tutorial, free cheatshet, free training, blog, technical blog, coding, coders, programming blog, free online tools">
         <meta name="twitter:card" content="summary_large_image">
         <meta property="og:site_name" content="Ashutosh Tripathy">
         <meta name="twitter:image:alt" content="Homepage of ashutoshtripathy.com">
-        <title>Blog | codexashutosh</title>
+        <title>Boost Your Python Performance with Just One Line of Code | codexashutosh</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link
             href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
@@ -22,12 +23,12 @@
             rel="stylesheet">
         <script src="https://kit.fontawesome.com/1195c8d3a8.js" crossorigin="anonymous"></script>
         <link rel="shortcut icon" href="/path/to/favicon.ico">
-        <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
-        <link rel="icon" href="../favicon_io/android-chrome-192x192.png">
-        <link rel="manifest" href="../favicon_io/site.webmanifest">
-        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../favicon_io/favicon-16x16.png">
+        <link rel="icon" href="../../favicon_io/android-chrome-192x192.png">
+        <link rel="manifest" href="../../favicon_io/site.webmanifest">
+        <link rel="stylesheet" href="../../styles/style.css">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFHZ04EDKY"></script>
@@ -142,17 +143,38 @@
             </div>
         </nav>
         <div class="bannerBtn blog-back">
-            <a class="button" href="/"><i class="fa fa-backward"></i> Back to home</a>
+            <a class="button" href="/blog"><i class="fa fa-backward"></i> Back to blog</a>
         </div>
-        <section id="blog" class="blog">
-            <div class="cards">
-                <div class="card" onclick="window.location.href='/blog/why-trino-is-becoming-a-must-have-tool-for-modern-data-engineers';">
-                    <img class="blog-thumbnail" src="../images/blog/thumbnails/trino.jpg" alt="">
-                    <p class="card-label blog-card">Why Trino is Becoming a Must-Have Tool for Modern Data Engineers</p>
-                </div>
-                <div class="card" onclick="window.location.href='/blog/boost-your-python-performance-with-just-one-line-of-code';">
-                    <img class="blog-thumbnail" src="../images/blog/thumbnails/lru_cache.jpg" alt="">
-                    <p class="card-label blog-card">Boost Your Python Performance with Just One Line of Code!</p>
+        <section id="blog" class="post">
+            <div class="blog-container">
+                <div class="blog-content">
+                    <h1>Boost Your Python Performance with Just One Line of Code!</h1>
+                    <div class="text-content">
+                        <p class="author-label" style="font-weight: bold;"><img src="../../favicon_io/favicon-16x16.png" alt=""> codexashutosh | June 11, 2024</p>
+                        <p>Ever wondered if there's a single line of Python that could optimize your code execution time significantly? Here's a hidden gem for you: using the `@lru_cache` decorator from `functools` module.</p>
+
+                        <p>Why It Matters: 
+                            `@lru_cache` (Least Recently Used cache) is a powerful tool that can save the results of expensive function calls and reuse them when the same inputs occur again. This can dramatically speed up your program, especially if you have recursive functions or those that perform heavy computations.</p>
+
+                        <p>How to Use It: 
+                            Simply add `@lru_cache` above your function definition.</p>
+                        
+                        <img class="post-img" src="../../images/blog/thumbnails/lru_cache.jpg" alt="">
+
+                        <p>The Result: 
+                            Without `@lru_cache`, calculating Fibonacci numbers can be painfully slow due to redundant computations. With it, you turn an exponential time complexity into a linear one.</p>
+
+                        <p>Pro Tip: 
+                            Use `maxsize=None` to cache all function calls. Adjust `maxsize` based on your memory availability and use case.</p>
+
+                        <p>Important Note: 
+                            While `@lru_cache` is highly effective, it's not universally applicable:
+                            1. Pure Functions: It works best with pure functions (same input always produces the same output).
+                            2. Memory Constraints: Caching too many results can lead to high memory usage.
+                            3. Mutable Arguments: Avoid using it with functions that take mutable arguments like lists or dictionaries.</p>
+
+                        <p>Leverage this simple yet powerful trick to optimize your Python code today!</p> 
+                    </div>
                 </div>
             </div>
         </section>
