@@ -424,6 +424,7 @@ nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
     div img {
         height: 100px;
     }
