@@ -446,13 +446,16 @@ nav{
         flex-direction: column;
         border-radius: 20px;
         box-shadow:  5px 5px 17px rgb(10, 10, 10), -5px -5px 17px #2d2d2d;
+        &.blog-card {
+            justify-content: space-between;
+        }
         img {
             height: 100px;
             width: 100px;
             object-fit: contain;
             &.blog-thumbnail {
-                height: auto;
-                width: 200px;
+                height: 200px;
+                width: auto;
                 filter: grayscale(100%);
             }
         }
@@ -464,9 +467,8 @@ nav{
             &.card-label {
                 color: lightgray;
                 font-size: 1.1rem;
-                &.blog-card {
+                &.blog-card-label {
                     text-align: left;
-                    text-decoration: underline;
                 }
             }
         }

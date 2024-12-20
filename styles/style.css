@@ -461,6 +461,9 @@ nav ul li:hover {
   border-radius: 20px;
   box-shadow: 5px 5px 17px rgb(10, 10, 10), -5px -5px 17px #2d2d2d;
 }
+.cards .card.blog-card {
+  justify-content: space-between;
+}
 .cards .card img {
   height: 100px;
   width: 100px;
@@ -468,8 +471,8 @@ nav ul li:hover {
      object-fit: contain;
 }
 .cards .card img.blog-thumbnail {
-  height: auto;
-  width: 200px;
+  height: 200px;
+  width: auto;
   filter: grayscale(100%);
 }
 .cards .card p {
@@ -482,9 +485,8 @@ nav ul li:hover {
   color: lightgray;
   font-size: 1.1rem;
 }
-.cards .card p.card-label.blog-card {
+.cards .card p.card-label.blog-card-label {
   text-align: left;
-  text-decoration: underline;
 }
 .cards .card:hover {
   box-shadow: 4px 6px 0 #2d2d2d, -4px -4px 6px 0 rgb(10, 10, 10), inset -4px -4px 6px 0 #2d2d2d, inset 4px 4px 6px 0 rgb(10, 10, 10);
