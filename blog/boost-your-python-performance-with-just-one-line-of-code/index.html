@@ -9,7 +9,7 @@
         <meta property="og:url" content="https://ashutoshtripathy.com/blog/boost-your-python-performance-with-just-one-line-of-code">
         <meta property="og:type" content="article">
         <meta name="keywords"
-        content="codexashutosh, Ashutosh Tripathy, codexashutosh.com, Pythoneer, Ashutosh Tripathy CV, Ashutosh Tripathy Resume, Ashutosh Tripathy Portfolio, Ashutosh Tripathi, Ashutosh Tripathi CV, Ashutosh Tripathi Resume, Ashutosh Tripathi Portfolio, Python Fullstack Data Engineer, Python Consultant, Python Developer, ashutoshtripathy.com, ashutoshtripathi.com, free tutorial, free cheatshet, free training, blog, technical blog, coding, coders, programming blog, free online tools">
+        content="codexashutosh, Ashutosh Tripathy, codexashutosh.com, Pythoneer, Ashutosh Tripathy CV, Ashutosh Tripathy Resume, Ashutosh Tripathy Portfolio, Ashutosh Tripathi, Ashutosh Tripathi CV, Ashutosh Tripathi Resume, Ashutosh Tripathi Portfolio, Python Fullstack Data Engineer, Python Consultant, Python Developer, ashutoshtripathy.com, ashutoshtripathi.com, free tutorial, free cheatshet, free training, blog, technical blog, coding, coders, programming blog, free online tools, lru_cache">
         <meta name="twitter:card" content="summary_large_image">
         <meta property="og:site_name" content="Ashutosh Tripathy">
         <meta name="twitter:image:alt" content="Homepage of ashutoshtripathy.com">
@@ -151,28 +151,30 @@
                     <h1>Boost Your Python Performance with Just One Line of Code!</h1>
                     <div class="text-content">
                         <p class="author-label" style="font-weight: bold;"><img src="../../favicon_io/favicon-16x16.png" alt=""> codexashutosh | June 11, 2024</p>
-                        <p>Ever wondered if there's a single line of Python that could optimize your code execution time significantly? Here's a hidden gem for you: using the `@lru_cache` decorator from `functools` module.</p>
-
-                        <p>Why It Matters: 
-                            `@lru_cache` (Least Recently Used cache) is a powerful tool that can save the results of expensive function calls and reuse them when the same inputs occur again. This can dramatically speed up your program, especially if you have recursive functions or those that perform heavy computations.</p>
-
-                        <p>How to Use It: 
-                            Simply add `@lru_cache` above your function definition.</p>
-                        
+                        <p>Ever wondered if there's a single line of Python that could optimize your code execution time significantly? Here's a hidden gem for you: using the <code>@lru_cache</code> decorator from `functools` module.</p>
+                        <br/>
+                        <h2>Why it matters</h2>
+                        <p><code>@lru_cache</code> (Least Recently Used cache) is a powerful tool that can save the results of expensive function calls and reuse them when the same inputs occur again. This can dramatically speed up your program, especially if you have recursive functions or those that perform heavy computations.</p>
+                        <br/>
+                        <h2>How to use it</h2>
+                        <p>Simply add <code>@lru_cache</code> above your function definition.</p>
+                        <br/>
                         <img class="post-img" src="../../images/blog/thumbnails/lru_cache.jpg" alt="">
-
-                        <p>The Result: 
-                            Without `@lru_cache`, calculating Fibonacci numbers can be painfully slow due to redundant computations. With it, you turn an exponential time complexity into a linear one.</p>
-
-                        <p>Pro Tip: 
-                            Use `maxsize=None` to cache all function calls. Adjust `maxsize` based on your memory availability and use case.</p>
-
-                        <p>Important Note: 
-                            While `@lru_cache` is highly effective, it's not universally applicable:
-                            1. Pure Functions: It works best with pure functions (same input always produces the same output).
-                            2. Memory Constraints: Caching too many results can lead to high memory usage.
-                            3. Mutable Arguments: Avoid using it with functions that take mutable arguments like lists or dictionaries.</p>
-
+                        <br/>
+                        <h2>The Result</h2>
+                        <p>Without <code>@lru_cache</code>, calculating Fibonacci numbers can be painfully slow due to redundant computations. With it, you turn an exponential time complexity into a linear one.</p>
+                        <br/>
+                        <h2>Pro Tip</h2>
+                        <p>Use <code>maxsize=None</code> to cache all function calls. Adjust <code>maxsize</code> based on your memory availability and use case.</p>
+                        <br/>
+                        <h2>Important Note</h2>
+                        <p>While <code>@lru_cache</code> is highly effective, it's not universally applicable:</p>
+                        <ol>
+                            <li>Pure Functions: It works best with pure functions (same input always produces the same output).</li>
+                            <li>Memory Constraints: Caching too many results can lead to high memory usage.</li>
+                            <li>Mutable Arguments: Avoid using it with functions that take mutable arguments like lists or dictionaries.</li>
+                        </ol>
+                        <br/>
                         <p>Leverage this simple yet powerful trick to optimize your Python code today!</p> 
                     </div>
                 </div>

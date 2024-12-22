@@ -582,6 +582,36 @@ nav ul li:hover {
     width: 100%;
   }
 }
+.post .blog-content .text-content table {
+  border-collapse: collapse;
+  border: 1px solid #707070;
+  overflow-x: auto;
+}
+@media (max-width: 480px) {
+  .post .blog-content .text-content table {
+    font-size: 0.8rem;
+  }
+}
+.post .blog-content .text-content thead th {
+  position: sticky;
+  top: 0;
+  color: #1a1a1a;
+  background: #707070;
+}
+.post .blog-content .text-content th, .post .blog-content .text-content td {
+  padding: 8px;
+  text-align: left;
+  word-wrap: break-word;
+  border: 1px solid #707070;
+}
+.post .blog-content .text-content tr:hover {
+  background-color: #0f0f0f;
+}
+.post .blog-content ol, .post .blog-content ul {
+  margin-left: 20px;
+  padding-left: 20px;
+  list-style-position: outside;
+}
 .post h1 {
   text-transform: uppercase;
 }
@@ -945,29 +975,6 @@ ul.cloud a[data-weight="10"] {
 }
 .hon .honCard p {
   font-weight: bold;
-}
-
-table {
-  display: none;
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  background-color: #fff;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: left;
-}
-
-th {
-  background-color: #1565C0;
-  color: #f2f2f2;
-}
-
-tr:hover {
-  background-color: #ddd;
 }
 
 #footer {
