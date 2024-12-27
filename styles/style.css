@@ -583,6 +583,7 @@ nav ul li:hover {
   }
 }
 .post .blog-content .text-content .python-code {
+  font-size: 0.8rem;
   font-family: "Fira Code", monospace;
   background-color: #2d2d2d;
   color: #f8f8f2;
