@@ -223,16 +223,16 @@ print(item)</div>
                         <p>Descriptors let you control attribute access in your classes. They’re the driving force behind the @property decorator.</p>
                         <br/>
                         <div class="python-code">class Celsius:
-def __init__(self, temperature=0):
-    self._temperature = temperature
+    def __init__(self, temperature=0):
+        self._temperature = temperature
 
-def get_temperature(self):
-    return self._temperature
+    def get_temperature(self):
+        return self._temperature
 
-def set_temperature(self, value):
-    if value < -273.15:
-        raise ValueError("Temperature below -273.15 is not possible")
-    self._temperature = value
+    def set_temperature(self, value):
+        if value < -273.15:
+            raise ValueError("Temperature below -273.15 is not possible")
+        self._temperature = value
 
     temperature = property(get_temperature, set_temperature)
 
