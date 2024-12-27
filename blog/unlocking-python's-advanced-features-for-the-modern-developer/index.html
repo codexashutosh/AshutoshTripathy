@@ -234,7 +234,7 @@ def set_temperature(self, value):
         raise ValueError("Temperature below -273.15 is not possible")
     self._temperature = value
 
-temperature = property(get_temperature, set_temperature)
+    temperature = property(get_temperature, set_temperature)
 
 c = Celsius(25)
 c.temperature = -300  # Raises ValueError</div>
