@@ -3,16 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Ashutosh Tripathy | codexashutosh">
-        <meta property="og:description" content="Hi! I am an SDE at KPMG and this is my portfolio.">
-        <meta property="og:image" content="https://ashutoshtripathy.com/images/ogLogo.png">
-        <meta property="og:url" content="https://ashutoshtripathy.com/blog/">
+        <meta property="og:title" content="Unlocking Python's Advanced Features for the Modern Developer">
+        <meta property="og:description" content="Unlocking Python's Advanced Features for the Modern Developer">
+        <meta property="og:image" content="https://ashutoshtripathy.com/images/blog/thumbnails/Unlocking Python's Advanced Features for the Modern Developer.jpeg">
+        <meta property="og:url" content="https://ashutoshtripathy.com/blog/unlocking-python\'s-advanced-features-for-the-modern-developer">
+        <meta property="og:type" content="article">
         <meta name="keywords"
-        content="codexashutosh, Ashutosh Tripathy, codexashutosh.com, Pythoneer, Ashutosh Tripathy CV, Ashutosh Tripathy Resume, Ashutosh Tripathy Portfolio, Ashutosh Tripathi, Ashutosh Tripathi CV, Ashutosh Tripathi Resume, Ashutosh Tripathi Portfolio, Python Fullstack Data Engineer, Python Consultant, Python Developer, ashutoshtripathy.com, ashutoshtripathi.com, free tutorial, free cheatshet, free training, blog, technical blog, coding, coders, programming blog, free online tools">
+        content="codexashutosh, Ashutosh Tripathy, codexashutosh.com, Pythoneer, Ashutosh Tripathy CV, Ashutosh Tripathy Resume, Ashutosh Tripathy Portfolio, Ashutosh Tripathi, Ashutosh Tripathi CV, Ashutosh Tripathi Resume, Ashutosh Tripathi Portfolio, Python Fullstack Data Engineer, Python Consultant, Python Developer, ashutoshtripathy.com, ashutoshtripathi.com, free tutorial, free cheatshet, free training, blog, technical blog, coding, coders, programming blog, free online tools, python advanced, advanced python, python features">
         <meta name="twitter:card" content="summary_large_image">
         <meta property="og:site_name" content="Ashutosh Tripathy">
         <meta name="twitter:image:alt" content="Homepage of ashutoshtripathy.com">
-        <title>Blog | codexashutosh</title>
+        <title>Unlocking Python's Advanced Features for the Modern Developer | codexashutosh</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link
             href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
@@ -22,12 +23,12 @@
             rel="stylesheet">
         <script src="https://kit.fontawesome.com/1195c8d3a8.js" crossorigin="anonymous"></script>
         <link rel="shortcut icon" href="/path/to/favicon.ico">
-        <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
-        <link rel="icon" href="../favicon_io/android-chrome-192x192.png">
-        <link rel="manifest" href="../favicon_io/site.webmanifest">
-        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../favicon_io/favicon-16x16.png">
+        <link rel="icon" href="../../favicon_io/android-chrome-192x192.png">
+        <link rel="manifest" href="../../favicon_io/site.webmanifest">
+        <link rel="stylesheet" href="../../styles/style.css">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFHZ04EDKY"></script>
@@ -142,21 +143,115 @@
             </div>
         </nav>
         <div class="bannerBtn blog-back">
-            <a class="button" href="/"><i class="fa fa-backward"></i> Back to home</a>
+            <a class="button" href="/blog"><i class="fa fa-backward"></i> Back to blog</a>
         </div>
-        <section id="blog" class="blog">
-            <div class="cards">
-                <div class="card blog-card" onclick="window.location.href='/blog/unlocking-python\'s-advanced-features-for-the-modern-developer';">
-                    <img class="blog-thumbnail" src="../images/blog/thumbnails/Unlocking Python's Advanced Features for the Modern Developer.jpeg" alt="">
-                    <p class="card-label blog-card-label">Unlocking Python's Advanced Features for the Modern Developer</p>
-                </div>
-                <div class="card blog-card" onclick="window.location.href='/blog/why-trino-is-becoming-a-must-have-tool-for-modern-data-engineers';">
-                    <img class="blog-thumbnail" src="../images/blog/thumbnails/trino.jpg" alt="">
-                    <p class="card-label blog-card-label">Why Trino is Becoming a Must-Have Tool for Modern Data Engineers</p>
-                </div>
-                <div class="card blog-card" onclick="window.location.href='/blog/boost-your-python-performance-with-just-one-line-of-code';">
-                    <img class="blog-thumbnail" src="../images/blog/thumbnails/lru_cache.jpg" alt="">
-                    <p class="card-label blog-card-label">Boost Your Python Performance with Just One Line of Code!</p>
+        <section id="blog" class="post">
+            <div class="blog-container">
+                <div class="blog-content">
+                    <h1>Unlocking Python's Advanced Features for the Modern Developer</h1>
+                    <div class="text-content">
+                        <p class="author-label" style="font-weight: bold;"><img src="../../favicon_io/favicon-16x16.png" alt=""> codexashutosh | December 27, 2024</p>
+                        <p>Python's simplicity is one of its biggest strengths, but its advanced features are what make it truly powerful. Today, I'll walk you through three tools—context managers, dataclasses, and descriptors—that can transform the way you code. Let's explore how they work, with examples, diagrams, and use cases.</p>
+                        <br/>
+                        <h2>1. Context Managers Beyond Files</h2>
+                        <p>When you use <code>with</code> statements, you ensure resources are properly managed, even during errors. Custom context managers take this to the next level. Here's how to create one for timing operations:</p>
+                        <br/>
+                        <div class="python-code">from contextlib import contextmanager
+import time
+
+@contextmanager
+def timer():
+    start = time.time()
+    yield
+    end = time.time()
+    print(f"Elapsed time: {end - start:.2f} seconds")
+
+# Usage:
+with timer():
+    time.sleep(2)  # Simulating a task</div>
+                        <br/>
+                        <p><b>Real-World Application</b></p>
+                        <ul>
+                            <li>Benchmarking scripts or code sections quickly and effectively.</li>
+                        </ul>
+                        <br/>
+                        <h2>2. Dataclasses to the Rescue</h2>
+                        <p>Dataclasses, introduced in Python 3.7, simplify the creation of classes meant to store data. They cut down on boilerplate code and work well with type annotations.</p>
+                        <br/>
+                        <div class="python-code">from dataclasses import dataclass
+
+@dataclass
+class Product:
+    name: str
+    price: float
+    stock: int
+
+# Example:
+item = Product("Laptop", 1500.0, 10)
+print(item)</div>
+                        <br/>
+                        <p><b>Why Dataclasses?</b></p>
+                        <ul>
+                            <li>Automatic generation of <code>__init__</code>, <code>__repr__</code>, and equality methods.</li>
+                            <li>Support for default values and immutability.</li>
+                        </ul>
+                        <br/>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th class="two-column">Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Default Values</td>
+                                    <td><code>field(default=42)</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Immutable Dataclass</td>
+                                    <td><code>frozen=True</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Custom Field Metadata</td>
+                                    <td><code>field(metadata={})</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <h2>3. Descriptors: The Secret Weapon</h2>
+                        <p>Descriptors let you control attribute access in your classes. They’re the driving force behind the @property decorator.</p>
+                        <br/>
+                        <div class="python-code">class Celsius:
+def __init__(self, temperature=0):
+    self._temperature = temperature
+
+def get_temperature(self):
+    return self._temperature
+
+def set_temperature(self, value):
+    if value < -273.15:
+        raise ValueError("Temperature below -273.15 is not possible")
+    self._temperature = value
+
+temperature = property(get_temperature, set_temperature)
+
+c = Celsius(25)
+c.temperature = -300  # Raises ValueError</div>
+                        <br/>
+                        <p><b>Practical Use</b></p>
+                        <ul>
+                            <li>Enforcing rules and validations in data models or APIs.</li>
+                        </ul>
+                        <br/>
+                        <h2>Wrapping Up</h2>
+                        <ol>
+                            <li>Context Managers eliminate resource management headaches.</li>
+                            <li>Dataclasses make your code elegant and concise.</li>
+                            <li>Descriptors enable powerful, reusable attribute logic.</li>
+                        </ol>
+                        <p>Each of these features can save you time, reduce errors, and make your Python code more robust. Why not try them out today?</p>
+                    </div>
                 </div>
             </div>
         </section>

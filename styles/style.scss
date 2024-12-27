@@ -555,6 +555,16 @@ nav{
                     width: 100%;
                 }
             }
+            .python-code {
+                font-family: 'Fira Code', monospace;
+                background-color: #2d2d2d;
+                color: #f8f8f2;
+                border-radius: 8px;
+                overflow-x: auto;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                padding: 10px;
+            }
             table {
                 border-collapse: collapse;
                 border: 1px solid #707070;
@@ -580,6 +590,9 @@ nav{
                     th {
                         &:nth-child(-n+2){
                             border-right-color: #1a1a1a;
+                            &.two-column {
+                                border-right-color: #707070;
+                            }
                         }
                     }
                 }
